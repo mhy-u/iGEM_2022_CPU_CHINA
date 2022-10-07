@@ -1,114 +1,29 @@
-<style>
-     /* footer_css */
-         a {
-            text-decoration: none;
-            list-style: none;
-            cursor: pointer;
-            color: #ffffff;
-        }
-        li {
-            list-style: none;
-            float: left;
-        }
-        .footerbox {
-            margin-top:200px;
-            height: 250px;
-            width: 100%;
-            background-color: #115596;
-            border-radius: 50px 50px 1px 1px;
-        }
-
-        .contacttext {
-            font-weight: bolder;
-            font-size: 30px;
-            color: #ffffff;
-            text-align: center;
-            padding-top: 40px;
-        }
-
-        .logo {
-            width: 1000px;
-            height: 25px;
-            margin: 60px auto;
-        }
-
-        .logobox {
-            width: 80px;
-            margin-left: 130px;
-        }
-
-        .logoall {
-            width: 60px;
-            height: 60px;
-            position: relative;
-            cursor: pointer;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            transform: translate(-50%, -50%);
-            float: left;
-        }
-
-        .logoall:hover {
-            width: 70px;
-            height: 70px;
-        }
-
-        .weibologo {
-            background-image: url(./static/imgs/weibologo.jfif);
-        }
-
-        .bilibililogo {
-            background-image: url(./static/imgs/bilibililogo.png);
-        }
-
-        .githublogo {
-            background-image: url(./static/imgs/githublogo.png);
-        }
-
-        .schoollogo {
-            background-image: url(./static/imgs/schoollogo.png);
-        }
-
-        .logotext {
-            font-size: 18px;
-            /* width: 1000px; */
-            height: 35px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: -40px auto;
-        }
-        /* footer_css */   
-</style>
-
+<!-- footer_part -->
 <footer class="footerbox">
+    <div class="thanksbox">
+        <div class="teamlogobox teamlogo"></div>
+        <div class="collabrationbox">
+            
+        </div>
+    </div>
+    <hr style="color:#ffffff">
     <div class="contacttext">Contact us</div>
     <ul class="logo">
-        <li class="logobox">
-            <a href="https://weibo.com/u/6054819039">
-                <div class="logoall weibologo"></div>
-            </a>
+        <li class="logobox footer_li">
+            <a class="footer_a" href="mailto:cpuchina2022@163.com"><div class="logoall weibologo"></div></a>
+            <a class="footer_a" href="mailto:cpuchina2022@163.com" style="margin-left: -120px;;">cpuchina2022@163.com</a>
         </li>
-        <li class="logobox">
-            <a href="https://space.bilibili.com/1453586595">
-                <div class="logoall bilibililogo"></div>
-            </a>
+        <li class="logobox footer_li">
+            <a class="footer_a" href="https://space.bilibili.com/1453586595"><div class="logoall bilibililogo"></div></a>
+            <a class="footer_a" href="https://space.bilibili.com/1453586595" style="margin-left: -90px;">2022CPU_CHINA</a>
         </li>
-        <li class="logobox">
-            <a href="https://github.com/cpu-igem/cpu-igem2021">
-                <div class="logoall githublogo"></div>
-            </a>
+        <li class="logobox footer_li">
+            <a class="footer_a" href="https://gitlab.igem.org/2022/cpu-china/"><div class="logoall githublogo"></div></a>
+            <a class="footer_a" href="https://gitlab.igem.org/2022/cpu-china/" style="margin-left: -100px;font-size: 18px;">Team&nbsp;wiki's&nbsp;repository</a>
         </li>
-        <li class="logobox" style="margin-left: 175px;">
-            <a href="https://international.cpu.edu.cn/">
-                <div class="logoall schoollogo"></div>
-            </a>
+        <li class="logobox footer_li" style="margin-left: 175px;">
+            <a class="footer_a" href="https://international.cpu.edu.cn/"><div class="logoall schoollogo"></div></a>
+            <a class="footer_a" href="https://international.cpu.edu.cn/" style="margin-left: -110px;font-size:17px">International&nbsp;Communication</a>
         </li>
-    </ul>
-    <ul class="logotext" style="text-align: center">
-        <li style="margin-left: 500px;"><a href="https://weibo.com/u/6054819039">@CPU_CHINA2022</a></li>
-        <li style="margin-left: 75px;" class="ml"><a href="https://space.bilibili.com/1453586595">2022CPU_CHINA</a></li>
-        <li style="margin-left: 75px;" class="ml"><a href="https://github.com/cpu-igem/cpu-igem2022">Like our Website?</a></li>
-        <li style="margin-left: 60px;" class="ml"><a href="https://international.cpu.edu.cn/">International Communication</a></li>
     </ul>
 </footer>
