@@ -71,17 +71,7 @@
 .mhynavbox li:hover {
     font-size: 28px;
 }
-/* .backtoindex{
-    top: -85px;
-    left: -80px;
-    position: fixed;
-    z-index: 10;
-    height:480px;
-    width: 480px;
-    background-image: url(../imgs/backtoindex.png);
-    transform: scale(0.5);
-    background-repeat: no-repeat;
-} */
+
 
 .mhynavbox li:first-child {
     background-color: #115596;
