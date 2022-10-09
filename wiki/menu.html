@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../static/css/navigation.css" type="text/css">
+<link rel="stylesheet" href="../static/css/font.css" type="text/css">
+
 <!-- navigation_part -->
 <a href="../../index.html" class="backtoindex"></div></a>
 <div id="cover" class="cover"></div>
@@ -37,3 +40,19 @@
         <li><a href="./data_accessibility_statements.html">Data Accessibility Statements</a></li>
     </div>
 </div>
+
+<script>
+  // navigation_js
+  var nav = document.getElementById("nav");
+ var navbox = document.getElementById("navbox");
+ var navul = document.getElementById("navul");
+ var cover = document.getElementById("cover");
+ nav.onmouseenter = function () {
+     navbox.style.display = "block"
+     cover.style.display = "block"
+ }
+ navbox.onmouseleave = function () {
+     navbox.style.display = "none"
+     cover.style.display = "none"
+ }
+</script>
