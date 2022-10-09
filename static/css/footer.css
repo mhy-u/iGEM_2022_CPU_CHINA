@@ -101,17 +101,21 @@
 
 
 .maillogo {
-    background-image: url(../imgs/maillogo.png);
+   /*  background-image: url(../imgs/maillogo.png); */
+    background-image: url(https://static.igem.wiki/teams/4308/wiki/static/imgs/maillogo.png);
 }
 
 .bilibililogo {
-    background-image: url(../imgs/bilibililogo.png);
+    /* background-image: url(../imgs/bilibililogo.png); */
+    background-image: url(https://static.igem.wiki/teams/4308/wiki/static/imgs/bilibililogo.png);
 }
 
 .gitlablogo {
-    background-image: url(../imgs/gitlablogo.png);
+    /* background-image: url(../imgs/gitlablogo.png); */
+    background-image: url(https://static.igem.wiki/teams/4308/wiki/static/imgs/gitlablogo.png);
 }
 
 .schoollogo {
-    background-image: url(../imgs/schoollogo.png);
+    /* background-image: url(../imgs/schoollogo.png); */
+    background-image: url(https://static.igem.wiki/teams/4308/wiki/static/imgs/schoollogo.png);
 }
