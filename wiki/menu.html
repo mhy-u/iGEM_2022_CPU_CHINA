@@ -44,15 +44,44 @@
 <script>
   // navigation_js
   var nav = document.getElementById("nav");
- var navbox = document.getElementById("navbox");
- var navul = document.getElementById("navul");
- var cover = document.getElementById("cover");
- nav.onmouseenter = function () {
-     navbox.style.display = "block"
-     cover.style.display = "block"
- }
- navbox.onmouseleave = function () {
-     navbox.style.display = "none"
-     cover.style.display = "none"
- }
+    var navbox = document.getElementById("navbox");
+    var navul = document.getElementById("navul");
+    var cover = document.getElementById("cover");
+    nav.onmouseenter = function () {
+        navbox.style.display = "block"
+        cover.style.display = "block"
+    }
+    navbox.onmouseleave = function () {
+        navbox.style.display = "none"
+        cover.style.display = "none"
+    }
+
+    function show(id, flag) {
+    console.log(id)
+    let elementById = document.getElementById(id);
+    let elementById1 = document.getElementById(id + "Tag");
+    resetColor()
+    elementById.style.backgroundColor = "#115596";
+    elementById.style.color = "#ffffff";
+    if (flag) {
+        setTagNone()
+        elementById1.style.display = "block"
+    }
+    }
+
+    function setTagNone() {
+    for (const elementsByClassNameElement of document.getElementsByClassName("Tag")) {
+        elementsByClassNameElement.style.display = "none"
+    }
+    }
+
+    function resetColor() {
+    let elementsByTagName = document.getElementsByClassName("naval");
+    console.log(elementsByTagName)
+    for (let i = 0; i < elementsByTagName.length; i++) {
+        elementsByTagName[i].style.backgroundColor = "#ffffff";
+        elementsByTagName[i].style.color = "#333333";
+    }
+    }
+
 </script>
