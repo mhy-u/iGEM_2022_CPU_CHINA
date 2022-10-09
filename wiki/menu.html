@@ -1,93 +1,39 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-
-    <!---- TEAM NAME ---->
-    <a class="navbar-brand" href="#">CPU_CHINA</a>
-
-    <!---- SMALL SCREEN MENU ICON ---->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto left-aligned">
-
-        <!---- HOME ---->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('index') }}">Home</a>
-        </li>
-
-        <!---- TEAM ---->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="{{ url_for('pages', page='team') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Team
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='team') }}">Team</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='collaborations') }}">Collaborations</a></li>
-          </ul>
-        </li>
-
-        <!---- PROJECT ---->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Project
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='communication') }}">Communication</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">Description</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='implementation') }}">Implementation</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='partnership') }}">Partnership</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='proof-of-concept') }}">Proof of Concept</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='results') }}">Results</a></li>
-          </ul>
-        </li>
-
-        <!---- PARTS ---->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Parts
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='part-collection') }}">Part Collection</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='parts') }}">Parts</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='improve') }}">Improve</a></li>
-          </ul>
-        </li>
-
-        <!---- SAFETY ---->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('pages', page='safety') }}">Safety</a>
-        </li>
-
-        <!---- HUMAN PRACTICES ---->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('pages', page='human-practices') }}">Human Practices</a>
-        </li>
-
-        <!---- AWARDS ---->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Awards
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}">Education</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='hardware') }}">Hardware</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='inclusivity') }}">Inclusivity</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='measurement') }}">Measurement</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='model') }}">Model</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='plant') }}">Plant</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='software') }}">Software</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='sustainable') }}">Sustainable</a></li>
-          </ul>
-        </li>
-
-      </ul>
+<!-- navigation_part -->
+<a href="../../index.html" class="backtoindex"></div></a>
+<div id="cover" class="cover"></div>
+<div id="nav" class="nav"></div> 
+<div id="navbox" class="navbox">
+    <ul id="navul">
+        <li class="naval nav_firstclass" id="project" onmouseenter="show(this.id,true);"onmouseleave="show('project',false)">Project</li>
+        <li class="naval nav_firstclass" id="method" onmouseenter="show('method',true)" onmouseleave="show('method',false)"> Method</li>
+        <li class="naval nav_firstclass" id="result" onmouseenter="show('result',true)" onmouseleave="show('result',false)">Result</li>
+        <li class="naval nav_firstclass" id="safety" onmouseenter="show('safety',true)" onmouseleave="show('safety',false)">Safety</li>
+        <li class="naval nav_firstclass" id="team" onmouseenter="show('team',true)" onmouseleave="show('team',false)"> Team</li>
+        <li class="naval nav_firstclass" id="data" onmouseenter="show('data',true)" onmouseleave="show('data',false)">Data and Records</li>
+    </ul>
+    <div id="projectTag" class="Tag">
+        <li><a href=".background.html">Background</a></li>
+       
+        <li><a href="./description.html">Description</a></li>
+        <li><a href=".design.html">Design</a></li>
     </div>
-  </div>
-</nav>
+    <div id="methodTag" class="Tag">
+        <li><a href="./method_dry_lab.html">Dry Lab</a></li>
+        <li><a href="./method_wet_lab.html">Wet Lab</a></li>
+    </div>
+    <div id="resultTag" class="Tag">
+        <li><a href="./summary.html">Summary</a></li>
+        <li><a href="./result_dry_lab.html">Dry Lab</a></li>
+        <li><a href="./result_wet_lab.html">Wet Lab</a></li>
+    </div>
+    <div id="safetyTag" class="Tag">
+        <li><a href="./safety.html">Safety</a></li>
+    </div>
+    <div id="teamTag" class="Tag">
+        <li><a href="./members.html">Members</a></li>
+    </div>
+    <div id="dataTag" class="Tag">
+        <li><a href="./experiment_records.html">Experiment Records</a></li>
+        <li><a href="./data_accessibility_statements.html">Data Accessibility Statements</a></li>
+    </div>
+</div>
