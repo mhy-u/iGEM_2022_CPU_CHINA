@@ -1,0 +1,228 @@
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mhypntopimg {
+    background-repeat: no-repeat;
+    position: fixed;
+    top:-5%;
+    width: 100%;
+    height:100%;
+    z-index: -1;
+}
+.mhycatimg {
+    /* display: flex;
+    flex-direction: column; */
+    width: 100%;
+}
+
+.mhypnmain {
+    /* justify-content: center; */
+    background-color: rgb(255, 255, 255);
+    /* opacity: 0.2; */
+    height:10000px;
+    font-size: 50px;
+    padding:20px 200px;
+    z-index:2;
+}
+
+/* .mhyleftfixed {
+    position: fixed;
+    width: 100%;
+    height:800px;
+    z-index: 6;
+} */
+.mhypnleft {
+    /* position: fixed;
+    top:650px;
+    left:200px; */
+    font-size: 30px;
+    font-weight: 600;
+    /* background-color: aqua; */
+    opacity: 0.7;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    width: 20%;
+    height: 350px;
+    /* margin-left: 5px; */
+    margin: 0 auto;
+    padding: 5px 5px 5px 5px;
+    background: white;
+    color: #056cda;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border-top: 2px solid rgb(4, 116, 187);
+    border-right: 2px solid rgb(4, 116, 187);
+    border-bottom: 2px solid rgb(4, 116, 187);
+    box-shadow: 2px 2px rgb(4, 116, 187);
+    line-height: 1.2em;
+    z-index: 2;
+}
+.mhyDNAimg {
+    position: absolute;
+    width: 80%;
+    height:90%;
+    top: 25px;
+    left: -40%;
+    z-index: 2;
+}
+
+
+.mhypnright{
+    background-color: rgb(246, 246, 246);
+    float: right;
+    position: relative;
+    width: 72%;
+    height: auto;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    padding: 0 5% 5%;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgb(0 0 0 / 30%), 0 0 4px rgb(0 0 0 / 0%) inset;
+    /* line-height: 1.3em; */
+    font-size: 1.1em;
+    font-family: Source-Sans-Pro-Bold;
+    font-weight: lighter;
+}
+
+.mhyleftnavtitle {
+    text-transform: uppercase;
+    position: absolute;
+    top: 25px;
+    left: 10%;
+    width: 60%;
+    text-align: center;
+    color: #202020;
+    font-family: "MONTSERRAT-BLACK1";
+    font-size:25px;
+    font-weight: 800;
+    z-index: 3;
+}
+
+.mhyleftnav {
+    position: absolute;
+    padding-left: 14px;
+    padding-top: 20px;
+    overflow: hidden;
+    top: 60px;
+    width: 90%;
+    z-index: 3;
+}
+
+.mhyleftnav :hover{
+    color:#056cda;
+}
+
+.mhyleftcatlog {
+    /* font-size: 20px; */
+    /* position: absolute; */
+    /* padding-left: 14px; */
+    overflow: hidden;
+    top: 60px;
+    width: 100%;
+    z-index: 3;
+}
+
+/* 左侧目录列表 */
+.mhyleftcatlog li {
+    color: #605f5f;
+    margin: 5% 15%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "CABIN-REGULAR";
+    font-size: 20px;
+    font-weight: 600;
+    width: 85%;
+    /* list-style: none; */
+}
+
+.mhyleftcatlog li a {
+    color: #3d3d3d;
+    list-style: none;
+    text-decoration: none;
+}
+
+.current {
+    color: #7a7a7b;
+}
+
+.mhyrightcontent {
+    /* background-color: aqua; */
+    width:100%;
+    margin: 50px auto;
+}
+
+/* 正文中的图片格式 */
+.mhyrightcontent img {
+    object-fit:contain;
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+.mhyrightcontent h2{
+    margin: 15% auto;
+    text-align: center;
+    font-family: Source-Sans-Pro;
+    color: rgb(9, 98, 176);
+    font-size: 50px;
+}
+
+.mhyrightcontent h3{
+    font-family: Source-Sans-Pro;
+    margin: 20px 0;
+    color: rgb(9, 98, 176);
+    font-size:28px;
+
+}
+
+.mhyrightcontent h4{
+    font-family: Source-Sans-Pro;
+    margin: 20px 0;
+    color: rgb(9, 98, 176);
+    font-size:25px;
+
+}
+.mhyrightcontent h5{
+    font-family: Source-Sans-Pro;
+    margin: 20px 0;
+    color: rgb(9, 98, 176);
+    font-size:25px;
+
+}
+
+.mhyrightcontent p{
+    line-height: 1.6;
+    text-align:justify;
+    margin:20px 0px;
+    font-family:SOURCESANSPRO-REGULAR;
+    font-size: 22px;
+    color: #38393a;
+    text-shadow: 1px 0px;
+    opacity: 0.8;
+
+}
+
+/* 图片标注 */
+.mhybrat {
+    text-align: center;
+    font-family: SOURCESANSPRO-REGULAR;
+    color: #38393a;
+    font-size: 20px;
+    margin:10px 0;
+    font-weight:bolder;
+}
+
+/* 参考文献 */
+.mhyref {
+    margin:25px 0px;
+    font-family:SOURCESANSPRO-REGULAR;
+    font-size: 20px;
+    color: #38393a;
+    opacity: 0.8;
+    font-style: italic;
+}
