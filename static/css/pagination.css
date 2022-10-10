@@ -153,6 +153,7 @@
 
 .mhyrightcontent {
     /* background-color: aqua; */
+    text-align: center;
     width:100%;
     margin: 50px auto;
 }
