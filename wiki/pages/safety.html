@@ -5,7 +5,7 @@
 
 {% block page_content %}
 
-<div class="row mt-4">
+<!-- <div class="row mt-4">
   <div class="col">
     <div class="bd-callout bd-callout-info">
       <h4>Safety and Security Award</h4>
@@ -45,6 +45,79 @@
     <hr>
     <p>What safety procedures do you use every day in the lab? Did you perform any unusual experiments, or face any unusual safety issues? Write about them here!</p>
   </div>
-</div>
+</div> -->
+
+
+<div>
+  <!-- Pagination_header -->
+  <header>
+  <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/safety.png"  class="mhypntopimg" alt="图片加载失败" >
+  <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/cat.png"  class="mhycatimg" alt="图片加载失败" >
+  </header>
+  <div class="mhypnmain" style="height:7000px;">
+      <!-- left -->
+      <div class="mhypnleft">
+          <div class="mhyleftnavtitle">safety</div>
+          <div class="mhyleftnav">
+              <ul class="mhyleftcatlog">
+                  <li><a href="#title1">Overview</a></li>
+                  <li><a href="#title2">General lab safety</a></li>
+                  <li><a href="#title3">project-design-safety</a></li>
+                  <li><a href="#title4">Our solution</a></li>
+                  <li><a href="#title5">Reference</a></li>
+                  <li><a href="#title6"></a></li>
+              </ul>
+          </div>
+          <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/dna.png" class="mhyDNAimg" alt="">
+      </div>
+      <!-- right -->
+      <div class="mhypnright">
+          <div class="mhyrightcontent">
+
+            <h2 id='title1'>Overview</h2>
+            <p>Here, we developed a convenient, readable and economical platform for cancer screening. During the experiment process, we consider safety and security as an important component of our project. On this page, we will demonstrate how we continuously implemented various measures to ensure the safety and security of all related parts, from experiments to future application.</p>
+            <h2 id='title2'>General lab safety</h2>
+            <p>People who entered the laboratory were trained by our tutor and instructors and strictly followed the established laboratory safety principles of our school, and all experiments were conducted under the supervision of our instructors. People washed their hands upon entry into and go out of the laboratory. When doing experiments, wearing suitable clothing with lab coats and disposable gloves is extremely necessary. To the waste of biochemical experiments, they were classified correctly and disposed appropriately.</p>
+            <p><strong>1. Safety assessment:</strong> For safer lab work, every one of our team had attended the laboratory safety lesson and took a biosafety examination. Only members who pass the lab safety test are allowed to conduct our experiments.
+            <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/safety/picture1.png" width="60%" style="float:center;">  
+            <p>Figure 1. Safety test</p>
+            <p><strong>2. Wearing safety:</strong> Before entering the laboratory, operators must properly wear lab coats, masks, eye protection, and lab gloves to ensure their safety. Also, slippers and shorts are forbidden in the lab.</p>
+           
+            <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/safety/picture2.jpg" width="60%" style="float:center;">
+                   
+            <p class="mhybrat">Figure 2. Standard dress code</p>
+            <p><strong>3. Storage safety:</strong> The reagents used in the experiments should be stored at appropriate temperatures and in specific containers according to the corresponding storage standards. Flammable, explosive, and toxic reagents should be placed in specially customized safety cabinets under the supervision of specialized personnel.</p>
+            
+                <figure style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/safety/picture3.jpg" width="60%" style="float:center;">
+                </figure>
+           
+            <p>Figure 3. Storage for some reagents</p>
+            <p><strong>4. Hazard Precautions:</strong> Our labs are equipped with fire cabinets, shower heads, and other equipment to deal with emergencies such as fire.</p>
+          
+                <figure style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/safety/picture4.jpg" width="60%" style="float:center;">
+                </figure>
+            
+            <p class="mhybrat">Figure 4. Fire cabinets</p>
+            <p><strong>5. Waste Disposal Safety:</strong> The waste generated from each experiment will be sorted and put into the appropriate bins for subsequent recycling and disposal.</p>
+           
+                <figure style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/safety/picture5.jpg" width="60%" style="float:center;">
+                   
+                </figure>
+           
+            <p>Figure 5. Experimental waste bins</p>
+            <h2 id='title3'>Project Design Safety</h2>
+            <p>Our main experiments were performed in vitro. We purchased the ssDNA template of lnc00857. After PCR amplification, we prepared our lnc00857 after reverse transcription and purification. RT-RPA primers, RCA primers and single strand DNA for preparing DNA nanostructures have been designed and purchased by us.
+            Considering biosafety, we choose Escherichia coli BL21(DE3) as our chassis, as this organism is categorized in risk group 1 and the iGEM white list, thus they are non-pathologic to human beings. In addition, we designed our own sgRNA and sent it to the company for plasmid synthesis, and then we transcribed it in vitro. 
+            Meanwhile, although being reprogrammed, the introduced parts will not confer our engineered strains a strengthened environmental adaptive capacity and make them become more advantageous in species competition. Thus, these engineered strains post little risk to the environment. Despite all this, in view of standard aseptic operation that we undertake, the risk of engineered strains escaping or leaking into the environment is minimized.It can be seen from the above that under the correct operation, our experimental process is completely safe.</p>
+            <h2 id='title4'>project-design-safety</h2>
+            <p>The glucose oxidase is adopted as the signal converter of the hardware, whose function is catalyzing the redox reaction specifically, oxidizing decomposing glucose into gluconic acid and hydrogen peroxide to convert biological signal to electric signal. Glucose oxidase has no toxicity and side effects to human body, and is widely used in food, medicine, feed and other industries. It plays a signifiant role in removing glucose, deoxygenating, and sterilizing as well. If the product can be used in the real world in the future, the only input is several drops of blood without body-device’s direct contact, which avoids the potential risk of infection. Besides, we select Arduino Uno demo board as our device platform, which functions with only 5V power supplement. The low voltage avoids risk of electric shock. And it is worth noting that we didn’t obtain any blood samples through any means during our experimental process, so there were no related safety risk. Committed to implementing safety throughout the whole detection system, our team lays great emphasize to protecting the safety of human body as well as environment.</p>
+            
+
+          </div>
+      </div>
+  </div> 
 
 {% endblock %}
