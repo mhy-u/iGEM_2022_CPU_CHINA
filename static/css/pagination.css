@@ -163,7 +163,7 @@
     left:50%;
     margin: 25px auto;
     object-fit:contain;
-    width: 700px;
+    width: 100%;
 }
 
 .mhyrightcontent h2{
