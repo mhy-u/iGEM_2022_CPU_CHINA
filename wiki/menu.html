@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{{url_for('static',filename='css/font.css')}}" type="text/css"> -->
 
 <!-- navigation_part -->
-<a href="index.html" class="backtoindex"></div></a>
+<a href="{{ url_for('index') }}" class="backtoindex"></div></a>
 <div id="mhycover" class="mhycover"></div>
 <div id="mhynav" class="mhynav"></div> 
 <div id="mhynavbox" class="mhynavbox">
@@ -21,8 +21,8 @@
     <div id="projectTag" class="mhyTag">
         <li><a href="background.html">Background</a></li>
        
-        <li><a href="{{url_for('pages',filename='description.html')}}">Description</a></li>
-        <li><a href="{{url_for('pages',filename='design.html')}}">Design</a></li>
+        <li><a href="{{ url_for('pages', page='description') }}">Description</a></li>
+        <li><a href="{{ url_for('pages', page='design') }}">Design</a></li>
     </div>
     <div id="methodTag" class="mhyTag">
         <li><a href="method_dry_lab.html">Dry Lab</a></li>
