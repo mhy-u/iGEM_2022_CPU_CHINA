@@ -15,6 +15,7 @@
 }
 
 .footerbox {
+    bottom: 0;
     box-shadow: #596168;
     /* margin-top:200px; */
     height: 600px;
