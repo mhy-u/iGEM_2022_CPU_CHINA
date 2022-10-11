@@ -219,11 +219,12 @@
 
 /* 表格 */
 .mhyrightcontent figure {
+    font-size: 22px;
     margin: 5% 0;
     border-radius: 12px;
     overflow-x: auto;
 }
-.mhyrightcontent table {
+/* .mhyrightcontent table {
     margin-bottom: 2%;
     width: 97%;
     border: none;
@@ -240,7 +241,7 @@
     padding: 5px;
     border: 0.5px solid #eaeaea;
     line-height: 0.8em;
-}
+} */
 
 
 /* 图片标注 */
