@@ -220,7 +220,10 @@
 /* 表格 */
 .mhyrightcontent table {
     overflow: auto;
-    font-size: 10px;
+    font-size: 22px;
+    border-top: 1px #38393a;
+    border-left: 1px #38393a;
+    border-radius: 2px;
 }
 
 /* 图片标注 */
