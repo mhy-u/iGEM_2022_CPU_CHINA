@@ -218,7 +218,10 @@
 }
 
 /* 表格 */
-
+.mhyrightcontent table {
+    overflow: auto;
+    font-size: 10px;
+}
 
 /* 图片标注 */
 .mhybrat {
