@@ -218,31 +218,6 @@
 }
 
 /* 表格 */
-.mhyrightcontent figure{
-    font-family:SOURCESANSPRO-REGULAR;
-    font-size: 22px;
-    margin: 5% 0;
-    border-radius: 12px;
-    overflow-x: auto;
-}
-.mhyrightcontent table {
-    margin-bottom: 2%;
-    width: 97%;
-    border: none;
-    border-radius: 12px;
-    font-family: "CABIN-REGULAR";
-    -webkit-box-shadow: 0 1px 8px rgb(0 0 0 / 30%), 0 0 4px rgb(0 0 0 / 0%) inset;
-    -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0) inset;
-    box-shadow: 0 1px 8px rgb(0 0 0 / 30%), 0 0 4px rgb(0 0 0 / 0%) inset;
-    -o-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0) inset;
-}
-
-.mhyrightcontent table  tr th {
-    font-size: 0.1em;
-    padding: 5px;
-    border: 0.5px solid #eaeaea;
-    line-height: 0.8em;
-}
 
 
 /* 图片标注 */
