@@ -218,13 +218,48 @@
 }
 
 /* 表格 */
-.mhyrightcontent table {
-    overflow: auto;
-    font-size: 22px;
-    border-top: 1px #38393a;
-    border-left: 1px #38393a;
-    border-radius: 2px;
+.mhyrightcontent figure {
+    margin: 5% 0;
+    border-radius: 12px;
+    overflow-x: auto;
 }
+.mhyrightcontent table {
+    display: table;
+    margin-bottom: 2%;
+    width: 97%;
+    border: none;
+    border-radius: 12px;
+    font-family: "CABIN-REGULAR";
+    -webkit-box-shadow: 0 1px 8px rgb(0 0 0 / 30%), 0 0 4px rgb(0 0 0 / 0%) inset;
+    -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0) inset;
+    box-shadow: 0 1px 8px rgb(0 0 0 / 30%), 0 0 4px rgb(0 0 0 / 0%) inset;
+    -o-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0) inset;
+}
+.mhyrightcontent tr {
+    height: 40px;
+}
+.mhyrightcontent td {
+    font-size: 0.7em;
+    padding: 5px;
+    border: 0.5px solid #eaeaea;
+    line-height: 1.2em;
+}
+.mhyrightcontent th {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 8px;
+    border: none;
+    background: #0071fe;
+    font-family: "MONTSERRAT-BLACK1";
+    font-size: large;
+    line-height: 1.5em;
+    color: #ffffff;
+    font-size: 0.7em;
+    padding: 5px;
+    border: 0.5px solid #eaeaea;
+    line-height: 1.2em;
+}
+
 
 /* 图片标注 */
 .mhyrightcontent span{
