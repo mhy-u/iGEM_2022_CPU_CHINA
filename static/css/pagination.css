@@ -217,6 +217,18 @@
 
 }
 
+/* 表格 */
+.mhyrightcontent table {
+    line-height: 1.6;
+    text-align:justify;
+    margin:20px 0px;
+    font-family:SOURCESANSPRO-REGULAR;
+    font-size: 22px;
+    color: #38393a;
+    text-shadow: 1px 0px;
+    opacity: 0.8;
+}
+
 /* 图片标注 */
 .mhybrat {
     text-align: center;
