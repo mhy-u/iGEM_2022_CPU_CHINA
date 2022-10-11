@@ -5,7 +5,7 @@
 
 {% block page_content %}
 
-<div class="row mt-4">
+<!-- <div class="row mt-4">
   <div class="col">
     <div class="bd-callout bd-callout-info">
       <h4>Bronze Medal Criterion #4</h4>
@@ -15,6 +15,202 @@
       <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
     </div>
   </div>
+</div> -->
+
+
+{% extends "layout.html" %}
+  
+{% block title %}Engineering Success{% endblock %}
+{% block lead %}Demonstrate engineering success in a part of your project by going through at least one iteration of the engineering design cycle.{% endblock %}
+
+{% block page_content %}
+
+<!-- <div class="row mt-4">
+  <div class="col">
+    <div class="bd-callout bd-callout-info">
+      <h4>Silver Medal Criterion #1</h4>
+      <p>Demonstrate engineering success in a part of your project by going through at least one iteration of the engineering design cycle. This achievement should be distinct from your Contribution for Bronze.<p>
+      <p>If you plan to show engineering success by creating a new Part that has been shown to work as expected, you must document your contribution on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a> for your team to be eligible for this criteria.</p>
+      <hr>
+      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
+    </div>
+  </div>
 </div>
+ -->
+<style>
+figure > img {
+  width:70%;
+  height:70%;
+}
+
+</style>
+
+ <div>
+  <!-- Pagination_header -->
+  <header>
+  <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/contribution.png"  class="mhypntopimg" alt="图片加载失败" >
+  <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/cat.png"  class="mhycatimg" alt="图片加载失败" >
+  </header>
+  <div class="mhypnmain">
+      <!-- left -->
+      <div class="mhypnleft">
+          <div class="mhyleftnavtitle">Contribution</div>
+          <div class="mhyleftnav">
+              <ul class="mhyleftcatlog">
+                  <li><a href="#title1"> Contribution Overview  </a></li>
+                  <li><a href="#title2"> CRISPR-CasΦ </a></li>
+                  <li><a href="#title3"> CRISPR-Cas14a </a></li>
+                  <li><a href="#title4"> References </a></li>
+                  <li><a href="#title5">  </a></li>
+                  <li><a href="#title6">  </a></li>
+              </ul>
+          </div>
+          <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/dna.png" class="mhyDNAimg" alt="">
+      </div>
+      <!-- right -->
+      <div class="mhypnright">
+          <div class="mhyrightcontent">
+
+            <!-- 内容 -->
+           <div>
+
+            <h2 id='title1'>Contribution Overview</h2>
+            <p>After comparing the cleavage efficiency and the target identification specificity of CasΦ , Cas12a and Cas14a，Our team designed and optimized the CRISPR-Cas system and used it in the subsequent detection devices of our project. We have not only performed directed evolution of CasΦ to obtain more effective mutants, but also further characterized and modified the old parts of Cas12a and Cas14a (<a href='http://parts.igem.org/Part:BBa_K2644102'>BBa_K2644102</a> and <a href='http://parts.igem.org/Part:BBa_K3982001'>BBa_K4308032</a>). We hope that our work will bring more good ideas to the subsequent project optimization and make a useful contribution for future iGEM teams.</p>
+            <style>
+            .center 
+            {
+              width: auto;
+              display: table;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            </style>
+            <div class="center"></div>
+            <figure><table>
+            <thead>
+            <tr><th style='text-align:center;' >Part number</th><th style='text-align:center;' >Type</th><th style='text-align:center;' >Description</th><th style='text-align:center;' >Designer</th><th style='text-align:center;' >Length</th></tr></thead>
+            <tbody><tr><td style='text-align:center;' ><a href='http://parts.igem.org/wiki/index.php?title=Part:BBa_K4308031'>BBa_K4308031</a></td><td style='text-align:center;' >Composite</td><td style='text-align:center;' >Cas12a1-crRNA-LINC00857</td><td style='text-align:center;' >Jun Zhang</td><td style='text-align:center;' >3782</td></tr><tr><td style='text-align:center;' ><a href='http://parts.igem.org/wiki/index.php?title=Part:BBa_K4308032'>BBa_K4308032</a></td><td style='text-align:center;' >Composite</td><td style='text-align:center;' >CasΦ-crRNA-LINC00857</td><td style='text-align:center;' >Jun Zhang</td><td style='text-align:center;' >2346</td></tr><tr><td style='text-align:center;' ><a href='http://parts.igem.org/wiki/index.php?title=Part:BBa_K4308033'>BBa_K4308033</a></td><td style='text-align:center;' >Composite</td><td style='text-align:center;' >Cas12f-crRNA-LINC00857</td><td style='text-align:center;' >Jun Zhang</td><td style='text-align:center;' >2965</td></tr><tr><td style='text-align:center;' ></div></td><td style='text-align:center;' >&nbsp;</td><td style='text-align:center;' >&nbsp;</td><td style='text-align:center;' >&nbsp;</td><td style='text-align:center;' >&nbsp;</td></tr></tbody>
+            </table></figure>
+            <h2 id='title2'>CRISPR-CasΦ</h2>
+            <h3 id='casφ--cas-12j'>CasΦ / Cas 12j</h3>
+            <p>CasΦ (<a href='http://parts.igem.org/wiki/index.php?title=Part:BBa_K4308005'>BBa_K4308005</a>), also known as Cas12j, a small RNA-guided enzyme found uniquely in bacteriophages, achieves programmable DNA cutting as well as genome editing [1]. The protein size of CasΦ is 70 to 80 kDa, about half the size of Cas9 and Cas12a, but maintains the ability to unwind and cut dsDNA. Cryo-EM-based structural studies indicate that CasΦ forms a compact structure, in which protein and crRNA are interwoven to realize RNA-guided dsDNA unwinding and cleavage. CasΦ also exhibits target-activated trans-cleavage ssDNA activity, which is an activity associated Cas12 nucleases family.</p>
+            <p>To improve its cleavage efficiency and sequence recognition specificity, our team optimized the design of key active sites of CasΦ to obtain greater clinical value for nucleic acid diagnosis. Finally, we successfully obtained CasΦ with its three mutants, including CasΦ(n) (<a href='http://parts.igem.org/wiki/index.php?title=Part:BBa_K4308015'>BBa_K4308015</a>), CasΦ(v) (<a href='http://parts.igem.org/wiki/index.php?title=Part:BBa_K4308016'>BBa_K4308016</a>) and CasΦ(Neg-K) (<a href='http://parts.igem.org/wiki/index.php?title=Part:BBa_K4308017'>BBa_K4308017</a>). Among them, The last type has the fastest cleavage rate. </p>
+            <h3 id='casφcrrna'>CasΦ_crRNA </h3>
+            <p>The insertion or deletion of uridine residues into kinetoplastid during RNA editing is a small non coding RNA that can pair with pre mRNA. crRNA edits RNA molecules, about 60-80 nucleotides in length, and is transcribed by a single gene. A hairpin secondary structure onto the spacer region of crRNA, was added to H4 when designing, which can increase the CRISPR-Cas system specificity for target cleavage [2].</p>
+            <p>To improve its cleavage efficiency and sequence recognition specificity, our team also optimized the design of key active sites of its crRNA. We designed several crRNAs (<a href='http://parts.igem.org/wiki/index.php?title=Part:BBa_K4308008'>BBa_K4308008</a>) with hairpin structures, and screened the crRNA (H4) (<a href='http://parts.igem.org/wiki/index.php?title=Part:BBa_K4308023'>BBa_K4308023</a>) with the lowest mismatch rate by adjusting the length of the hairpin structure, which can improve the detection efficiency of the CRISPR-Cas system for single-base mismatch targets. Finally, we optimized the CasΦ(Neg-K) / crRNA(H4) also known as Mut-4/H4 system (<a href='http://parts.igem.org/wiki/index.php?title=Part:BBa_K4308036'>BBa_K4308036</a>) for subsequent disease detection.</p>
+            <p>The results of the fluorescence analysis were shown in Figure 1, which further verify that the helix α7 of CasΦ might regulate the accessibility of the RuvC domain for the association of single-stranded DNA (ssDNA).</p>
+            <p><html>
+                <figure style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/parts-registry/bba-k4308005/fig-3.jpg" width="100%" style="float:center;">
+                    <figcaption>
+                    <p style="font-size:1rem">
+                    </p>
+                    </figcaption>
+                </figure>
+            </html>
+            <b><center>Figure.1 The time-course fluorescence intensity curves of FQ reporter cleavage by different Cas-crRNA in the presence of DNA targets.</center></b></p>
+            <p>The DNA detection performances of mutants were investigated by a series of DNA targets with different concentrations. The initial reaction rate of the fluorescence signal was employed to evaluate the trans-cleavage activity of different mutants. (Figure 2)</p>
+            <p><html>
+                <figure style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/parts-registry/bba-k4308005/fig-4.png" width="100%" style="float:center;">
+                    <figcaption>
+                    <p style="font-size:1rem">
+                    </p>
+                    </figcaption>
+                </figure>
+            </html>
+            <b><center>Figure.2 The reaction rates of FQ reporter cleavage by Cas-crRNA in the presence of DNA targets with different concentrations.</center></b></p>
+            <p>In order to verify the performance of our optimization CRISPR-Cas system for picking up DNA mutations from a large number of background sequences, we mixed different amounts of target sequences with mismatch sequences (MT13) to simulate artificial samples containing 50% to 0% DNA mutations. We chose Neg-K (a CasΦ mutant designed by our group) and crRNA H4 to construct the mutation detection system. As shown in Figure 3, compared with the conventional wild-type CasΦ - hairpin free crRNA system (WT/CrRNA in Figure 3), the Mut-4/H4 system showed better mutation detection performance. For Mut-4/H4, even if the fraction of target sequences was as low as 2%, the initial reaction rate of the fluorescence signal was still higher than that of the mismatch sequences.</p>
+            <p><html>
+                <figure style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/parts-registry/bba-k4308005/fig-6.png" width="100%" style="float:center;">
+                    <figcaption>
+                    <p style="font-size:1rem">
+                    </p>
+                    </figcaption>
+                </figure>
+            </html>
+            <b><center>Figure.3 The reaction rates of FQ reporter cleavage with samples containing 50% to 0% DNA mutations.</center></b></p>
+            <h2>CRISPR-Cas12a</h2>
+            <h3>Cas12a</h3>
+            As the description of iGEM18_TJU_China, Cas12a (<a href='http://parts.igem.org/wiki/index.php/Part:BBa_K2644102'>BBa_K2644102</a>) can be applied for fluorophore quencher (FQ) reporter assay for nucleic acid detection based on the trans-cleavage ssDNA activity. In vitro nucleic acid detection, it is often necessary to consider the specific cleavage rate of Cas nuclease. Cas12a has high cleavage efficiency for both target double-stranded DNA and non-target single-stranded DNA, but its ability to recognize SNP is not as good as CasΦ. Cas12a was used as a more mature control in this project to assist us in selecting appropriate Cas nucleases.</p>
+            <p>We verified the cleavage activity of the Cas12a with the dsDNA target, which can only be partially changed. We mixed Cas12a targeting dsDNA and Cas12a and kept them warm at 37 °C. We performed three sets of biological replicates. The PAGE results are showed in Figure 4.
+            <html>
+                <figure style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/parts-registry/bba-k4308007/fig-1.png" width="40%" style="float:center;">
+                    <figcaption>
+                    <p style="font-size:1rem">
+                    </p>
+                    </figcaption>
+                </figure>
+            </html>
+            <b><center>Figure.4 PAGE results for cleavage dsDNA target with Cas12a-sgRNA.</b> <i>The red box in lane 1 shows the band cut by Cas12a-sgRNA. </i></center></p>
+            <p><html>
+                <figure style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/parts-registry/bba-k4308007/fig-2.png" width="100%" style="float:center;">
+                    <figcaption>
+                    <p style="font-size:1rem">
+                    </p>
+                    </figcaption>
+                </figure>
+            </html></p>
+            <p style="text-align:center"><b>Figure. 5 The ssDNA cleavage activity of Cas14a. </b><i>Line 1: Cas 14a+sgRNA+dsDNA; Line 2: Cas14a+dsDNA; Line 3: sgRNA+dsDNA; Line 4: ssDNA; Line 5: Cas 12a+sgRNA+dsDNA; Line 6: Cas12a+dsDNA; Line 7: sgRNA+dsDNA; Line 8: ssDNA.</i></p>
+            <h2 id='title3'>CRISPR-Cas14a</h2>
+            <h3 id='cas14a'>Cas14a</h3>
+            <p>Cas14a，also known as Cas12f, is a kind of endonuclease that specifically binds to and cleaves the target dsDNA under the guidance of sgRNA (PAM site is required). As the description of iGEM21_IISER_Berhampur, Cas14a (<a href='http://parts.igem.org/wiki/index.php/Part:BBa_K3982001'>BBa_K3982001</a>) can bind to the target nucleic acid and activate its ssDNA trans-cleavage activity, so it has been applied to the molecular detection of the target nucleic acid in our project.</p>
+            <p>Considering that Cas14a may form inclusion body in the engineered bacteria, so that the synthesized one would sink in the form of crystals, we added MBP tag to the N-terminus of Cas14a to make Cas14a soluble and convenient for purification.
+             After purification, MBP tag was removed by protease cleavage to obtain biologically active Cas14a, which was verified by SDS-PAGE electrophoresis (Figure 6).
+            <html>
+                <figure style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/parts-registry/bba-k4308006/fig-4.png" width="100%" style="float:center;">
+                    <figcaption>
+                    <p style="font-size:1rem">
+                    </p>
+                    </figcaption>
+                </figure>
+            </html></p>
+            <p style="text-align:center"><b>Figure. 6 SDS-PAGE results for expression of Cas14a.</b></p>
+            <p>The fluorophore quencher (FQ) reporter assays were employed to evaluate the ssDNA trans-cleavage activity. The final reaction (20 μl) contained final concentrations of 100 nM Cas14a, 120nM sgRNA, 100nM FQ probe, with different concentration of target DNA in cleavage buffer (10 mM HEPES-Na, pH7.5, 150 mM KCl, 5 mM MgCl2, 10% glycerol, 0.5 mM TCEP). Fluorescence signals were obtained every 2 minutes at 37°C. (Figure 7)</p>
+            <p>This verifies that it has sufficient sensitivity to identify targets at various concentrations, especially from 0.5nM to 25nM. Plus, the quantification ability of Cas14a excel within 30min. As a result, Cas14a is capable to complete the precise quantification of our system.</p>
+            <p><html>
+                <figure style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/parts-registry/bba-k4308006/fig-6.png" width="100%" style="float:center;">
+                    <figcaption>
+                    <p style="font-size:1rem">
+                    </p>
+                    </figcaption>
+                </figure>
+            </html></p>
+            <p style="text-align:center"><b>Figure. 7 The ssDNA trans-cleavage activity of FQ reporter cleavage by Cas14a in the presence of DNA targets with different concentrations.</b></p>
+            <p>Despite the significant improvement in cleavage rate and specificity of the Neg-K/H4 system compared to the WT/CrRNA system, the activity of the Neg-K /H4 system is still poor compared to the more mature Cas12a and Cas14a systems. This may be due to the small size of CasΦ, which is only half that of Cas12a, and therefore its enzymatic activity is also relatively low. Although Cas14 is also small in size, it remains highly active when it is cleaved because it is a dimer.</p>
+            <p><html>
+                <figure style="display: flex; justify-content: center; align-items: center;">
+                    <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/parts-registry/bba-k4308006/fig-7.png" width="100%" style="float:center;">
+                    <figcaption>
+                    <p style="font-size:1rem">
+                    </p>
+                    </figcaption>
+                </figure>
+            </html></p>
+            <p style="text-align:center"><b>Figure. 8 The dsDNA trans-cleavage activity of FQ reporter cleavage by Cas proteins .</b></p>
+            <p>&nbsp;</p>
+            <h2 id='title4'>References</h2>
+            <p>[1] Pausch, P., B. Al-Shayeb, E. Bisom-Rapp, et al. CRISPR-CasPhi from huge phages is a hypercompact genome editor. Science 369, 333-337(2020).</p>
+            <p>[2] Kocak DD, Josephs EA, Bhandarkar V, Adkar SS, K. Increasing the specificity of CRISPR systems with engineered RNA secondary structures. Nat Biotechnol 37, 657-666(2019).</p>
+            
+
+
+           </div>
+
+
+          
+          </div>
+      </div>
+  </div> 
+</div>
+
+
+{% endblock %}
+
 
 {% endblock %}
