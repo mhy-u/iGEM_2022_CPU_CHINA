@@ -218,12 +218,12 @@
 }
 
 /* 表格 */
-.mhyrightcontent figure {
-    /* font-family:SOURCESANSPRO-REGULAR;
+.mhyrightcontent table {
+    font-family:SOURCESANSPRO-REGULAR;
     font-size: 22px;
     margin: 5% 0;
     border-radius: 12px;
-    overflow-x: auto; */
+    overflow-x: auto;
 }
 /* .mhyrightcontent table {
     margin-bottom: 2%;
