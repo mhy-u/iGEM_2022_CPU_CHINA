@@ -239,7 +239,7 @@
     height: 40px;
 }
 .mhyrightcontent td {
-    font-size: 0.7em;
+    font-size: 0.3em;
     padding: 5px;
     border: 0.5px solid #eaeaea;
     line-height: 1.2em;
@@ -251,10 +251,10 @@
     border: none;
     background: #0071fe;
     font-family: "MONTSERRAT-BLACK1";
-    font-size: large;
+   /*  font-size: large; */
     line-height: 1.5em;
     color: #ffffff;
-    font-size: 0.7em;
+    font-size: 0.3em;
     padding: 5px;
     border: 0.5px solid #eaeaea;
     line-height: 1.2em;
