@@ -5,7 +5,7 @@
 
 {% block page_content %}
 
-<div class="row mt-4">
+<!-- <div class="row mt-4">
   <div class="col">
     <div class="bd-callout bd-callout-info">
       <h4>Bronze Medal Criterion #2</h4>
@@ -83,5 +83,137 @@
     <p>Yes! You can have a project based on a previous team, or based on someone else's idea, <b>as long as you state this fact very clearly and give credit for the original project.</b></p>
   </div>
 </div>
+ -->
+
+
+ <link rel="stylesheet" href="{{ url_for('static', filename = 'css/atttrs/bootstrap.min.css') }}">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="{{ url_for('static', filename = 'js/attrs/jquery.min.js') }}"></script>
+
+    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <script src="{{ url_for('static', filename = 'js/attrs/popper.min.js') }}"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="{{ url_for('static', filename = 'js/attrs/bootstrap.min.js') }}"></script>
+ <style>
+  .container-fluid {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  }
+
+  .title {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      padding-bottom: 8rem;
+      font-size:3rem
+  }
+
+  .row {
+      background: #ffffff;
+  }
+
+  table {
+      text-align: center;
+      box-shadow: inset 1px black;
+  }
+
+  .text {
+      text-align: left;
+  }
+  .name {
+      font-weight: 700;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  }
+  .thead {
+      background-color: rgb(23, 106, 201);
+  }
+
+  th {
+      color: #fff;
+  }
+</style>
+
+<header>
+  <img class="top" id="top" src="./static/imgs/ATTRIBUTIONS.png" alt="图片迷路了">
+  <img class="cat" id="cat" src="./static/imgs/cat.png" alt="猫头迷路了">
+</header>
+
+<div class="title">
+  <div class="font-weight-bold font-italic">TEAM MEMBERS</div>
+</div>
+
+<section class="row">
+  <table class="table table-striped col-md-8 offset-md-2">
+      <thead class="thead">
+          <th>Name</th>
+          <th>Attributions</th>
+      </thead>
+      <tbody id="list1"></tbody>
+  </table>
+</section>
+
+  <div class="title">
+  <div class="font-weight-bold font-italic">Instructors & Advisors</div>
+</div>
+
+<section class="row">
+  <table class="table table-striped col-md-8 offset-md-2">
+      <thead class="thead">
+          <th>Name</th>
+          <th>Attributions</th>
+      </thead>
+      <tbody id="list2"></tbody>
+  </table>
+</section>
+
+<script>
+  const list = [
+      { name: "Keke Zhong", attribution: "She is the team leader of CPU_CHINA 2022. She manages different issues in the team, and makes connections with advisors and professors to optimize project. She participated in most parts of the wet lab, including amplification and purification of the genes, synthesis of nanostructures used to encapsulate enzymes, expression and purification of target proteins and so on. She is also involved in wiki content writing and is the chief reviser of wiki content." },
+      { name: "Hongyi Huang", attribution: "She is the team leader of CPU_CHINA 2022.She arranges the team tissues including the operation of experiments and analysis of results, communication with other teams, taking photos of the team, etc.She mainly completed the expression purification and activity verification of CasΦ and each mutant." },
+      { name: "Shenwei Shi", attribution: "Her work includes the amplification and purification of target genes, the characterisation of incomplete proteins, and the synthesis of associated nanostructures. She also helped with the project's finalization and partial design. She is also in charge of finishing all component applications and assisting with different wiki paperwork." },
+{ name: "Jun Zhang", attribution: "She assisted in the finalization of the team project and the design of some parts, and was also responsible for many work of the wet lab group, including the amplification and purification of target genes, characterization of some proteins, and synthesis of related nanostructures. In addition, she was responsible for completing all the applications for the parts and helped to complete various wiki paperwork."},
+{ name: "YiDong Zhang", attribution: "As the person in charge of hardware, he has developed the hardware of detection via Arduino Uno demo board and other components."},
+{ name: "Yifan Wu", attribution: "He completed some parts of the design and is responsible for some parts in the wet labs. He redesigned DNA-protein hybrid hydrogels and completed part of its experiment. He also assisted in the expression and purification of Cas14a nuclease and several CasΦ nuclease mutants, and he also participated in some experiments of RPA .He is also responsible for the collection, collation and analysis of part of the experiment data and helped with some of the wiki paperwork."},
+{ name: "Jiarui Li", attribution: "She participated in most parts of the wet lab, including but not limited to nucleic acid amplification and expression and purification of Cas14a nuclease and several CasΦ nuclease mutants. She is the chief writer and reviser of wiki content and is responsible for the collection and organization of experimental data. She assisted in redesigning the system of DNA-protein hybrid hydrogels."},
+{ name: "Qiyi Yu", attribution: "He is the mathematical modeling leader. He used bioinformatics methods to analyze the expression of linc00857 in various cancers and reveal its potential biomarker function for detection. Then, he combined the expression of linc00857 with clinical data and constructed models for diagnosis and models for detection of prognosis in various cancers."},
+{ name: "Honglu Shi", attribution: "She contributes to the modeling and is mainly responsible for the construction of the kinetic model. Based on the ODE equations and experimental data, the wet experiment parts are connected to simulate the function of the entire inspection system."},
+{ name: "Rui Lu", attribution: "She is a member of Human Practices. She conducted interviews with doctors and pharmacies and promoted synthetic biology to different groups of people in various ways such as making short videos, writing scientific articles, and organizing offline lectures. She also worked hard on the commercialization of the project. In addition, she is responsible for collaboration with some teams."},
+{ name: "Zhirou Xiong", attribution: "She is responsible for designing and completing human practice. She organized online communication meetings and kept in touch with other teams. She popularized synthetic biology to audiences of different age goupes in various ways. She sought the social value of our project, contacted companies and relevant institutions, and played a great role in the progress of the project."},
+{ name: "Zhuojun Zhang", attribution: "She is the wiki website art designer and completes the design of different forms of posters. She is responsible for all the artwork of online art exhibition which is a part of the collaboration.She is also in charge of the production of merchandise about the team."},
+{ name: "Ruiyang Ling", attribution: "She is the video producer and animator of the team who is responsible for promotion and presentation video. She undertakes all the scientific illustrations and animations in this program. Meanwhile, she assisted human practices in publicity of synthetic biology by making posters, editing brochures and producing videos."},
+{ name: "Hongyi Mo", attribution: "She is enthusiastic in programming thus be responsible for the wiki building jobs of CPU_CHINA."}
+  ]
+
+const list2 = [
+{ name: "Peng Luo", attribution: "He is the instructor of team CPU_CHINA. He is responsible for organizing and managing the work of the whole team and ensuring the smooth operation of the work.He provides guidance on the design and execution of team projects. Suggestions and assistance are also provided by him for the development of Human Practices activities. He reviewed and revised nearly all the paperwork and arranged the overall design of Wiki. He is involved in every decision-making and contributes to team development."},
+{ name: "Ruyi Ma", attribution: "She is the instructor of team CPU_CHINA. She is responsible for organizing and managing the work of the whole team. She reviewed and revised the main paperwork and the design of Wiki. She also participated in the general direction of the team’s decision-making and ensured that the content of the team’s work would not deviate from the right path."},
+{ name: "Qiming Luo", attribution: "He is the advisor of team CPU_CHINA. He provided guidance and suggestions for mathematical modeling, including the kinetics models and bioinformatic analysis."},
+{ name: "Jianxiang Guan", attribution: "He helped adjust the atmosphere of the team members. He provided his experience for art design and encourages designers to give play to creative thinking."}
+]
+  //获取表格对象
+  let tbody = document.querySelector('#list1')
+
+  list.forEach(obj => {
+      var newTr = document.createElement('tr');
+      newTr.innerHTML = '<td class="name">' + obj.name + '</td><td class="text">' + obj.attribution + '</td>'
+      tbody.appendChild(newTr)
+  })
+
+  let tbody2 = document.querySelector('#list2')
+  list2.forEach(obj => {
+      var newTr = document.createElement('tr');
+      newTr.innerHTML = '<td class="name">' + obj.name + '</td><td class="text">' + obj.attribution + '</td>'
+      tbody2.appendChild(newTr)
+  })
+
+
+</script>
+
+
 
 {% endblock %}
