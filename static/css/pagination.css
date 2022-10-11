@@ -218,7 +218,7 @@
 }
 
 /* 表格 */
-.mhyrightcontent table {
+.mhyrightcontent table td{
     font-family:SOURCESANSPRO-REGULAR;
     font-size: 22px;
     margin: 5% 0;
