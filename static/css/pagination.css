@@ -239,7 +239,7 @@
     height: 40px;
 }
 .mhyrightcontent td {
-    font-size: 0.3em;
+    font-size: 20px;
     padding: 5px;
     border: 0.5px solid #eaeaea;
     line-height: 1.2em;
@@ -254,7 +254,7 @@
    /*  font-size: large; */
     line-height: 1.5em;
     color: #ffffff;
-    font-size: 0.3em;
+    font-size: 20px;
     padding: 5px;
     border: 0.5px solid #eaeaea;
     line-height: 1.2em;
@@ -266,7 +266,7 @@
     text-align: center;
     font-family: SOURCESANSPRO-REGULAR;
     color: #434444;
-    font-size: 18px;
+    font-size: 20px;
     margin:10px 0;
     font-weight:bolder;
     display: block;
