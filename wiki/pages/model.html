@@ -1,48 +1,83 @@
 {% extends "layout.html" %}
   
 {% block title %}Model{% endblock %}
-{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
+{% block lead %}Sharing and collaboration are core values of iGEM. We encourage you to reach out and work with other teams on difficult problems that you can more easily solve together.{% endblock %}
 
 {% block page_content %}
 
-<div class="row mt-4">
+<!-- <div class="row mt-4">
   <div class="col">
     <div class="bd-callout bd-callout-info">
-      <h4>Gold Medal Criterion #3</h4>
-      <p>Use modeling to gain insight into how your project works or should be implemented. Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.</p>
+      <h4>Silver Medal Criterion #2</h4>
+      <p>Collaborate with one (or more) 2022 iGEM team(s) in a meaningful way.</p>
       <hr>
       <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
-    </div>
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Model Special Prize</h4>
-      <p>Models and computer simulations provide a great way to describe the functioning and operation of BioBrick Parts and Devices. Synthetic biology is an engineering discipline and part of engineering is simulation and modeling to determine system behavior before building your design. Designing and simulating can be iterated many times in a computer before moving to the lab. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior before or in conjunction with experiments in the wetlab.</p>
-      <p>To compete for the Best Model prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2022 Awards Page</a> for more information.</p>
     </div>
   </div>
 </div>
 
 <div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
+  <div class="col-lg-6">
+    <h2>Which teams can we work with?</h2>
     <hr>
-    <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
-    <p>Please note you can compete for both the Gold Medal criterion #3 and the Best Model prize with this page.</p>
+    <p>You can work with any other iGEM 2022 team in the competition. You can also work with non-iGEM research groups, but they do not count towards the iGEM team collaboration silver medal criterion.</p>
   </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
+  <div class="col-lg-6">
+    <h2>Some suggestions</h2>
     <hr>
     <ul>
-      <li><a href="http://2018.igem.org/Team:GreatBay_China/Model">2018 GreatBay China</a></li>
-      <li><a href="http://2018.igem.org/Team:Leiden/Model">2018 Leiden</a></li>
-      <li><a href="https://2019.igem.org/Team:IISER_Kolkata/Model">2019 IISER Kolkata</a></li>
-      <li><a href="https://2019.igem.org/Team:Exeter/Model">2019 Exeter</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Model">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Harvard/Model">2020 Harvard</a></li>
-      <li><a href="https://2020.igem.org/Team:Leiden/Model">2020 Leiden</a></li>
+      <li>Improve the function of another team's BioBrick Part or Device</li>
+      <li>Characterize another team's part</li>
+      <li>Debug a construct</li>
+      <li>Model or simulate another team's system</li>
+      <li>Test another team's software</li>
+      <li>Help build and test another team's hardware project</li>
     </ul>
   </div>
+</div> -->
+
+<div>
+  <!-- Pagination_header -->
+  <header>
+  <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/model.png"  class="mhypntopimg" alt="图片加载失败" >
+  <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/cat.png"  class="mhycatimg" alt="图片加载失败" >
+  </header>
+  <div class="mhypnmain">
+      <!-- left -->
+      <div class="mhypnleft">
+          <div class="mhyleftnavtitle">collaboration</div>
+          <div class="mhyleftnav">
+              <ul class="mhyleftcatlog">
+                  <li><a href="#title1"> Overview  </a></li>
+                  <li><a href="#title2"> Team Collaboration </a></li>
+                  <li><a href="#title3"> Online Meeting  </a></li>
+                  <li><a href="#title4"> Nanjing iGEM Association（NIA） </a></li>
+                  <li><a href="#title5">  </a></li>
+                  <li><a href="#title6">  </a></li>
+              </ul>
+          </div>
+          <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/dna.png" class="mhyDNAimg" alt="">
+      </div>
+      <!-- right -->
+      <div class="mhypnright">
+          <div class="mhyrightcontent">
+
+            <!-- 内容 -->
+          
+            <p>Our model is divided into two parts: raw letter analysis and kinetic modelling.</p>
+            <h2 id='title1'>In the bioinformatics analysis</h2>
+            <p>We firstly applied bioinformatics methods to evaluate LINC00875 as a potential biomarker for diagnosis and detection of prognosis within a variety of cancers. We analysed its expression levels in various cancers through TCGA RNA-seq and exoRBase2.0. We also analyzed the relationship between LINC00857 expression and tumor pathological staging using the GEPIA2 tool, which suggests that stage-specific expression changes in LINC00857 expression in case of many tumor types. The results revealed its potential biomarker function for detection. Through TCGA RNA-seq data, we found that the expression of LINC00857 had a high accuracy in diagnosing cancers. Then, we further linked LINC00857 expression with clinical data to construct models for  detection of prognosis within a variety of cancers. The results showed that LINC00857 expression was closely related to patient survival. Furthermore, we used bioinformatics methods to building a Machine Learning Model in selecting potential diagnostic lncRNA markers for atherosclerosis patients. The results showed that the lncRNAs we selected had a high accuracy in diagnosing atherosclerosis.</p>
+            <h2 id='title2'>In the dynamical models</h2>
+            <p>Our Dynamics Modeling section ran throughout the project. Corresponding to the four parts of the project design, we built four sub-models: reverse transcription isothermal amplification model, enzyme kinetic model for trans cleavage of CRISPR-Cas system, Model of starch hydrolysis by γ-Amylase and Electrical signal conversion model for glucose concentration.  Each sub-model was connected using upstream sub-model outputs as the downstream sub-model inputs. Finally, we simulated the kinetics behavior of the entire detection system, based on ODE equations and experimental data. Simulation output and wet lab experiment data reached a R-squared greater than 0.98. Mathematical models were solved using R as a software tool.</p>
+            <p>&nbsp;</p>
+            
+
+            
+          </div>
+      </div>
+  </div> 
 </div>
+
+
 
 {% endblock %}
