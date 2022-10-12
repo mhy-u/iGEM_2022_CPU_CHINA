@@ -162,13 +162,14 @@
 
 /* 正文中的图片格式 */
 .mhyrightcontent img {
-    float: center;
+    display: flex; justify-content: center; align-items: center;
+    /* float: center;
     align-items: center;
     justify-content: center;
     top:50%;
     left:50%;
     margin: 30px auto;
-    object-fit:contain;
+    object-fit:contain; */
     width: 100%;
 }
 
