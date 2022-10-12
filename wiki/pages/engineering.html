@@ -58,7 +58,7 @@
             <h2 id='title2'>Cas protein </h2>
             <h3 id='brief-introduction-1'>Brief Introduction:</h3>
             <p>Cas nucleases with trans-cleavage activity have been widely used in nucleic acid detection. However, Cas protein&#39;s large size and low specificity for single-base mismatch recognition hinder its application in this field. 
-            CRISPR-CasΦ (CRISPR-Cas12j), a RNA-directed enzyme found in phages, is about half the size of Cas12a, but retains the ability to unpack and cleft dsDNA, making it valuable in gene editing. Compared with widely used Cas12a and Cas14, CasΦ has better targeting specificity, but its cleavage activity is poor. Therefore, based on a rational design strategy and the introduction of hairpin structured crRNA, we hope to construct a new CRISPR-Cas system with high cleavage activity and good target recognition specificity.</p>
+            CRISPR-CasΦ (CRISPR-Cas12j), a RNA-directed enzyme found in phages, is about half the size of Cas12a, but retains the ability to unpack and cleft dsDNA, making it valuable in gene editing. Compared with widely used Cas12a and Cas14a, CasΦ has better targeting specificity, but its cleavage activity is poor. Therefore, based on a rational design strategy and the introduction of hairpin structured crRNA, we hope to construct a new CRISPR-Cas system with high cleavage activity and good target recognition specificity.</p>
             <h3 id='design-1'>Design:</h3>
             <p>In the initial design, as reported in the literature[1], CasΦ has small size, strong specificity and low dependence on PAM sequence, so we hoped to use CasΦ to connect RT-RPA and DNA nanosponge system to enhance the specificity of our entire system. However, the cutting rate of CasΦ is lower than that of Cas12a and Cas14a. Therefore, we hope to improve CasΦ&#39;s cutting rate and specificity, and establish a better CRISPR-Cas system for detection.
             We then conducted directed revolution for CasΦ protein, and screened for protein mutants with faster cutting rate and sgRNA with lower off-target rate through rational design. By altering the critical amino acids on the CasΦ protein&#39;s helix 7 and introducing the hairpin-structured crRNA, we made a point mutation. The positive controls Mut-1(nCasΦ) and Mut-2(vCasΦ) were created by Doudna&#39;s team. Our team created the mutants Mut-3 through Mut-6. The detailed mutation content is shown in Table 1.As reported by Gersbach et al, a hairpin secondary structure onto the spacer region of crRNA can increase the CRISPR-Cas system specificity for target cleavage[2]. To verify whether this strategy is effective for the trans-cleavage activity of CasΦ, we introduced different lengths of hairpin structures into the crRNA of CasΦ(Table 1 and Table 2).</p>
@@ -72,6 +72,8 @@
                     </figcaption>
                 </figure>
             </center>
+            
+            <center class="mhybrat">Table 2. The sequence of crRNAs with hairpin structures</center>
             <p><html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
                     <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/engineering-success/picture2.png" width="60%" style="float:center;">
@@ -81,7 +83,7 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <center class="mhybrat">Table 2. The sequence of crRNAs with hairpin structures</center>
+            
             <h3 id='build-and-test'>Build and Test</h3>
             <h4 id='section1-activity-verification-on-unmodified-casφ-cas12a-and-cas14a'>Section1: Activity verification on unmodified CasΦ, Cas12a and Cas14a</h4>
             <p>We first performed activity verification on unmodified CasΦ, Cas12a and Cas14a to confirm the order of activity size among them. </p>
@@ -98,9 +100,9 @@
             </html></p>
             <center class="mhybrat">Figure 1. The reaction rates of FQ reporter cleavage of Cas12a, Cas14a, and CasΦ systems.</center>
             <h4 id='section-2-the-ssdna-cleavage-activity-of-mutants'>Section 2: The ssDNA cleavage activity of mutants.</h4>
-            <p>Then, we produced and purified the Mut-1(nCasΦ) and Mut-2(vCasΦ) , which were created by Doudna&#39;s lab, and the results were in line with the previously published one. And the four mutant proteins (Mut-3 to Mu-6) were constructed by our team. </p>
+            <p>Then, we produced and purified the Mut-1(nCasΦ) and Mut-2(vCasΦ) , which were created by Doudna&#39;s lab, and the results were in line with the previously published one. And the four mutant proteins (Mut-3 to Mut-6) were constructed by our team. </p>
             <h5 id='result-2'>Result:</h5>
-            <p>In Mut 3-6, only Mut-4(Neg-K) had cleavage activity. When compared with Mut-1(nCasΦ) and Mut-2(vCasΦ), Mut-1(nCasΦ) had the better cleavage activity. The target-triggered trans-cleavage activity of wild-type and mutant Cas was assessed using the fluorophore quencher (FQ) reporter assays. Figure 2 displays the outcomes of the fluorescence analysis. Compared to the wild-type, Mut-4(Neg-K) exhibits a high target induced trans-cleavage activity. Additionally, its cleavage activity is equivalent to that of the Mut-1(nCasΦ)(nCas) created by Doudna&#39;s team.
+            <p>In Mut 3-6, only Mut-4(Neg-K) had cleavage activity. When compared with Mut-1(nCasΦ) and Mut-2(vCasΦ), Mut-1(nCasΦ) had the better cleavage activity. The target-triggered trans-cleavage activity of wild-type and mutant Cas was assessed using the fluorophore quencher (FQ) reporter assays. Figure 2 displays the outcomes of the fluorescence analysis. Compared to the wild-type, Mut-4(Neg-K) exhibits a high target induced trans-cleavage activity. Additionally, its cleavage activity is equivalent to that of the Mut-1(nCasΦ) created by Doudna&#39;s team.
              <html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
                     <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/engineering-success/picture4.png" width="60%" style="float:center;">
@@ -190,7 +192,9 @@
                 </figure>
             </html></p>
             <center class="mhybrat">Figure 7. The reaction rates of FQ reporter cleavage of Cas12a, Cas14a, CasΦ and Neg-K/H4 systems.
+
             We further validated the ability of Cas12a and Cas14a to cleave DNA nanosponge in our system. We found that the ability of Cas12a and Cas14a to cleavage DNA nanosponge and release γ-amylase was similar, which was inconsistent with the relative activity of the two in the previous FQ reporter gene experiment. This is because the Cas system can only effectively release the enzyme in the shallow layer of DNA nanosponge, while it is difficult to release the enzyme in the deep layer. Therefore, the difference between the two is reduced in the cleavage of nucleic acid nanostructures. Since it has been reported in the literature that Cas14a has stronger specificity for the target sequence and can identify single base mismatches in the target keenly[3], which is more in line with the requirements of our system for specific target recognition. Therefore, we decided to choose Cas14a in the final project design.
+            
             ### Learn:
             In synthetic biology, the choosing of optimal systems needs to take many factors into account.
             By deliberately introducing point mutations in Cas, our team created the Mut-4(Neg-K) mutant, which shares the same enzymatic activity as the mutant protein created by Doudna's team. Meanwhile, we used the hairpin-structured crRNA and achieved the optimal Cas-crRNA combination by tailoring the length of the hairpin structure to enhance the detection efficiency of the CRISPR-Cas system for single-base mismatch targets in nucleic acid detection applications. Our assay system outperformed traditional systems in terms of single-base mismatch target identification, which offers a better method for using the CRISPR-Cas system to detect nucleic acids. 
