@@ -100,7 +100,7 @@
     text-align: center;
     color: #202020;
     font-family: "MONTSERRAT-BLACK1";
-    font-size:2vw;
+    font-size:1.5vw;
     font-weight: 800;
     z-index: 3;
 }
@@ -289,7 +289,7 @@
 .mhyref {
     margin:25px 0px;
     font-family:SOURCESANSPRO-REGULAR;
-    font-size: 20px;
+    font-size: 16px;
     color: #38393a;
     opacity: 0.8;
     font-style: italic;
