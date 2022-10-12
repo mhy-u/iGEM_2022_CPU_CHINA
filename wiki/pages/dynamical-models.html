@@ -48,12 +48,15 @@
           <div class="mhyleftnavtitle">collaboration</div>
           <div class="mhyleftnav">
               <ul class="mhyleftcatlog">
-                  <li><a href="#title1">   </a></li>
-                  <li><a href="#title2">  </a></li>
-                  <li><a href="#title3">   </a></li>
-                  <li><a href="#title4">  </a></li>
-                  <li><a href="#title5">  </a></li>
-                  <li><a href="#title6">  </a></li>
+                  <li><a href="#title1"> Reverse transcription isothermal amplification model  </a></li>
+                  <li><a href="#title2"> Enzyme kinetic model for trans cleavage of CRISPR-Cas system </a></li>
+                  <li><a href="#title3"> Model of starch hydrolysis by γ-Amylase  </a></li>
+                  <li><a href="#title4"> Electrical signal conversion model for glucose concentration </a></li>
+                  <li><a href="#title5"> Kinetic simulation of the entire detection system </a></li>
+                  <li><a href="#title6"> Appendix 1.Substance names,parameter names and mathematical equations involved in the model of RPA </a></li>
+                  <li><a href="#title7"> Appendix 2.Substance names,parameter names and mathematical equations involved in enzyme kinetic model for trans cleavage of CRISPR-Cas system and γ-Amylase hydrolysis model </a></li>
+                  <li><a href="#title8"> References </a></li>
+                  <li><a href="#title9">  </a></li>
               </ul>
           </div>
           <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/dna.png" class="mhyDNAimg" alt="">
@@ -63,7 +66,122 @@
           <div class="mhyrightcontent">
 
             <!-- 内容 -->
-          
+            <p>Our Dynamics Modeling section ran throughout the project. Corresponding to the four parts of the project design, we built four sub-models: reverse transcription isothermal amplification model, enzyme kinetic model for trans cleavage of CRISPR-Cas system, Model of starch hydrolysis by γ-Amylase and Electrical signal conversion model for glucose concentration.  Each sub-model was connected using upstream sub-model outputs as the downstream sub-model inputs. Finally, we simulated the kinetics behavior of the entire detection system, based on ODE equations and experimental data. Simulation output and wet lab experiment data reached a R-squared greater than 0.98. Mathematical models were solved using R as a software tool.</p>
+            <h2 id='title1'>Reverse transcription isothermal amplification model</h2>
+            <h3 id='reverse-transcription'>Reverse transcription</h3>
+            <p>The simplified linc00857 reverse transcription process is shown in the following equation. The reaction process is rapid relative to the DNA isothermal amplification process and can be approximated as the amount of RNA added being reverse transcribed to the amount of DNA template in a very short time.</p>
+            <img src="https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture1.png">
+            <h3 id='recombinase-polymerase-amplification-rpa'>Recombinase Polymerase Amplification (RPA)</h3>
+            <p>For this section, we drew on the RPA model from the dry experiments of the 2019 Thessaly team. Based on the kinetic equations in the literature [1], we construct models by simplifying the reaction mechanism and changing some parameter values in conjunction with the data from the experiment.</p>
+            <h4 id='assumption'>Assumption</h4>
+            <p>i.	There is perfect symmetry between reactions involving forward and reverse primers.</p>
+            <p>ii.	ATP depletion was negligible over the time span examined.</p>
+            <p>iii.	The fluid is well mixed and all reactions that occur are kinetically controlled.</p>
+            <h4 id='response-mechanism-of-rpa'>Response mechanism of RPA</h4>
+            <p>At a constant temperature of 37°C, single-stranded DNA-binding proteins (GP32s) first binds to the primer, and then recombinases replace them in the primer DNA to form a polymer. When the polymer searches for a sequence that is completely complementary to the primer on the template DNA, the template DNA melts with the help of GP32s. At the same time, under the action of DNA polymerase, the nucleotides in the system are consumed to form a new DNA complementary chain. This process is repeated continuously to achieve exponential amplification of DNA numbers. </p>
+            <p>Compared with the reaction formula given in the literature [1], we simplified the four-step reaction formula in which n recombinases(n<em>R) sequentially substitute m GP32(m</em>G) for primer binding to a one-step reaction formula (2). And the reaction rate constant for this step was adjusted according to the literature.</p>
+            <p>There are chemical equations as follows, in which substance names and parameter names can be found in Appendix 1.</p>
+            <img src="https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture2.png">
+            <p><a h <img src="https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture1.png">
+            <p><strong>Figure 3. </strong>Response mechanism of RPA</p>
+            <h4 id='ordinary-differential-equations'>Ordinary Differential Equations</h4>
+            <p>Ordinary differential equations describing the RAA process are shown below, where the substance names and parameter names can be found in Appendix 1.</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture4.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture4.jpg</a></p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture5.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture5.jpg</a></p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture6.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture6.jpg</a></p>
+            <h4 id='set-parameters-in-conjunction-with-wet-experiments'>Set parameters in conjunction with wet experiments</h4>
+            <p>Based on the actual reaction time and RNA input of RT-RPA for the wet experiment, and the assumptions of the reverse transcription step, we took the RNA input of 1E-12 M as the input of DNA. The DNA concentration at 900s was taken as the output of the RPA step.</p>
+            <p>The following DNA amplification concentration profiles are shown. At 900s, the value of DNA is 2.97E-7.</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture7.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture7.jpg</a></p>
+            <p>Kinetics of the rest relevant variables in RPA model are shown below.</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture8.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture8.png</a></p>
+            <h2 id='title2'>Enzyme kinetic model for trans cleavage of CRISPR-Cas system</h2>
+            <h3 id='cas-grna-specific-activation'>Cas-gRNA specific activation</h3>
+            <p>Since the Cas-gRNA-specific activation step is strongly influenced by the base sequence, and it is often performed together with the trans-cleavage activity verification experiment during the wet-lab reaction. Therefore, we treat this process in the same way as the reverse transcription process. It is assumed that the step is very fast, i.e. the amount of DNA input in the previous step can be approximated as the amount of Cas-gRNA-activator complex generated in the next step.</p>
+            <h4 id='response-mechanism'>Response mechanism </h4>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture9.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture9.jpg</a></p>
+            <h3 id='enzymatic-kinetic-model-for-the-trans-cleavage-of-cas-grna'>Enzymatic kinetic model for the trans cleavage of Cas-gRNA</h3>
+            <p>Based on the literature [4], we quantified the kinetic parameters of Cas12a and Cas14a assuming that the trans-cleavage process of Cas proteins conforms to the Mie equation for enzyme kinetics, and we treated the activated Cas-gRNA-activator complex as an enzyme.</p>
+            <h4 id='reaction-mechanism'>Reaction mechanism</h4>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture10.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture10.jpg</a></p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture11.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture11.png</a></p>
+            <p><strong>Figure11 . </strong> Response mechanism of trans cleavage of CRISPR-Cas system</p>
+            <h4 id='the-reaction-rate-equation'>The reaction rate equation</h4>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture12.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture12.jpg</a></p>
+            <p>where V is the rate of production of the cleaved reporters, Vmax is the highest measured reaction velocity for the experiment, KM is the Michaelis constant, [S] is the concentration of uncleared substrate at equilibrium.</p>
+            <h4 id='data-fitting'>Data Fitting</h4>
+            <p>i.	Fluorescence value unit conversion</p>
+            <p>To achieve comparability of data, we converted the fluorescence units (AU) measured to concentration units (nM) using the formula in the literature [5] for the calibration of fluorescence values to reporter gene concentrations.</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture13.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture13.jpg</a></p>
+            <p>ii.	Fluorescence signal fitting
+            Fitting the wet experimental data after concentration unit conversion, we obtained the changes in cleaved reporter concentrations for the Cas12a and Cas14a over 180 min.</p>
+            <p>a. Cas12a</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture14.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture14.png</a></p>
+            <p><strong>Figure14.</strong> Fluorescence signal fitting of Cas12a</p>
+            <p>b. Cas14a</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture15.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture15.png</a></p>
+            <p><strong>Figure 15. </strong> Fluorescence signal fitting of Cas14a</p>
+            <p>iii.	Fitting of enzyme kinetic equations</p>
+            <p>According to the above fitted trend of the concentration of the cleaved reporter substrate, the production rate of the cleaved reporter substrate at the beginning of the reaction is basically linear. Combining with previous literature, we selected the data of the first two cycles (Cas12a, about 4 min) and the first three cycles (Cas14a, about 6 min) for the calculation of the initial rate. And then we fitted the initial velocities of the Cas12a and Cas14a at the ssDNA reporter substrate concentration gradient by the Michaelis–Menten kinetics and Linear fitting, respectively. The following are the fitting results.</p>
+            <p>c.	Cas12a for the first two cycles</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture16.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture16.png</a></p>
+            <p><strong>Figure 16. </strong> Fitting of Cas12a kinetic equations</p>
+            <p>d.	Cas14a for the first three cycles</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture17.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture17.png</a></p>
+            <p><strong>Figure 17. </strong> Fitting of Cas14a kinetic equations</p>
+            <p>The results of fitting the above two sets of data are summarized as follows.</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture18.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture18.jpg</a></p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture19.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture19.jpg</a></p>
+            <p>Combined with the above experimental data, we modeled the kinetics of Cas12a and Cas14a separately in this experiment. The corresponding reaction differential equations are shown below, and the reaction rate constants were obtained from the fitting results.</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture20.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture20.jpg</a></p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture21.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture21.jpg</a></p>
+            <h2 id='title3'>Model of starch hydrolysis by γ-Amylase</h2>
+            <h3 id='γ-amylase-production-rate'>γ-Amylase production rate</h3>
+            <p>We assumed that the rate of γ-Amylase production was proportional to the rate at which ssDNA was cleaved in the DNA nanosponge. And we determined this proportionality factor (k12) based on experimental data on the release of γ-Amylase from the DNA nanosponge.</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture22.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture22.jpg</a></p>
+            <h3 id='model-of-starch-hydrolysis-by-γ-amylase-2'>Model of starch hydrolysis by γ-Amylase</h3>
+            <p>γ-Amylase (EC 3.2.1.3) is an exoenzyme attacking both exo-(1-4) and branch-point (1-6)-linkages to produce glucose. The reaction of γ-Amylase is inhibited by the accumulation of product glucose at higher substrate starch concentrations. According to the literature [3], we obtained a Kinetic model for inhibition of starch hydrolysis by competitive products by 10U/ml γ-Amylase in high concentration soluble solution. We also converted the data from the literature for velocities based on the definition of enzyme activity. （PS. One unit of enzyme activity was defined as the amount of enzyme, which hydrolyzed 1 mg of starch per minute under specified conditions.）</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture23.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture23.jpg</a></p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture24.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture24.png</a></p>
+            <p><strong>Figure 24. </strong> Response mechanism of starch hydrolysis by γ-Amylase</p>
+            <p>As the concentration of the enzyme increased, the hydrolysis rate increased proportionally in the system containing soluble starches. So we assumed that:</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture25.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture25.jpg</a></p>
+            <p>After modelling the hydrolysis of starch by γ-amylase, the output of the corresponding glucose concentration was obtained by integrating it with the first two kinetic models. Using Cas12a as an example, here is the glucose concentration versus time curve that we fitted.</p>
+            <h2 id='title4'>Electrical signal conversion model for glucose concentration</h2>
+            <p>The member responsible for the hardware section fitted the detected glucose concentration to the voltage signal using a modified blood glucose meter. </p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture32.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture32.png</a></p>
+            <p>This gave us the differential equation for the change in glucose concentration on the change in electrical signal.	</p>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture33.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture33.png</a></p>
+            <h2 id='title5'>Kinetic simulation of the entire detection system</h2>
+            <p>For the entire assay system, four corresponding kinetic models were constructed in parts. As the wet experimental design was implemented in the same reaction system the Cas-gRNA-activator complex cleaves the DNA nanosponge in trans, releases the amylase hydrolysis substrate to produce glucose and detects the blood glucose concentration by a modified blood glucose meter.</p>
+            <p>So we combined the CRISPR-Cas system trans- cleavage kinetic model, the γ-Amylase hydrolysis starch model and the glucose concentration conversion to electrical signal model. The combined process was simulated with Cas12 as an example, and the curve of glucose concentration in the system with time was obtained. As shown below, the green and orange lines are the simulated data, while the red dots are the experimental data. The R-squared between the simulated output of Cas12a and the experimental data is 0.98872, which is calculated based on the following equation.</p>
+           <!-- <a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture26.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture26.jpg</a></p>
+            <a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture34.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture34.png</a></p> -->
+            <img src="https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture26.jpg" alt="">
+            <img src="https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture34.jpg" alt="">
+            <p>And according to the linear equation between the glucose concentration and the electrical signal obtained in the hardware section, the glucose concentration can be converted into an electrical signal to obtain a reading.</p>
+            <p>In summary, our project achieves a kinetic simulation of the entire assay system. In the RT-RPA part, we took the DNA concentration at 900s as the output by fitting the analysis to the relevant parameters in isothermal amplification, using the RNA of 1E-12M as input. In the Cas section, we took the DNA concentration output from the previous step as input, modelled the enzymatic kinetics of the Cas-gRNA-activator complex trans-cleavage activity and output the concentration of cleaved reporter DNA just reaching plateau. In the γ-amylase section, we converted the cleaved reporter DNA concentration output in the previous step to the γ-amylase release concentration and constructed a kinetic model of γ-amylase hydrolysis with competitive inhibition of the product, taking the glucose concentration just reaching plateau as the output. Finally, in the electrochemical section, we converted the glucose concentration to an electrical signal and obtained the glucometer readings.</p>
+            <p>&nbsp;</p>
+            <h2 id='title6'>Appendix 1.Substance names,parameter names and mathematical equations involved in the model of RPA.</h2>
+            <h3 id='11list-of-substance-names-involved-in-rpa'>1.1List of substance names involved in RPA</h3>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture28.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture28.png</a></p>
+            <h3 id='12list-of-parameters-involved-in-rpa'>1.2List of parameters involved in RPA</h3>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture29.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture29.jpg</a></p>
+            <h2 id='title7'>Appendix 2.Substance names,parameter names and mathematical equations involved in enzyme kinetic model for trans cleavage of CRISPR-Cas system and γ-Amylase hydrolysis model</h2>
+            <h3 id='21-list-of-substance-names-involved-in-models'>2.1 List of substance names involved in models</h3>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture30.jpg' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture30.jpg</a></p>
+            <h3 id='22-list-of-parameters-involved-in-models'>2.2 List of parameters involved in models</h3>
+            <p><a href='https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture31.png' target='_blank' class='url'>https://static.igem.wiki/teams/4308/wiki/mathematical-model/picture31.png</a></p>
+            <h2 id='title8'>References</h2>
+            <p class="mhyref">[1] Moody, C. et al.  “A mathematical model of recombinase polymerase amplificationunder continuously stirred conditions.’’Biochem. Eng. J. 2016, 112, 193– 201</p>
+            <p  class="mhyref">[2] Huyke, Diego A et al. “Enzyme Kinetics and Detector Sensitivity Determine Limits of Detection of Amplification-Free CRISPR-Cas12 and CRISPR-Cas13 Diagnostics.” Analytical chemistry vol. 94,27 (2022): 9826-9834. doi:10.1021/acs.analchem.2c01670</p>
+            <p  class="mhyref">[3] Mian Li et al.“Kinetic enhancement of starch bioconversion in thermoseparating aqueous two-phase reactor systems
+            .”Biochemical Engineering Journal,Volume 11, Issue 1,2002,Pages 25-32,ISSN 1369-703X.</p>
+            <p  class="mhyref">[4] Huyke, Diego A et al. “Enzyme Kinetics and Detector Sensitivity Determine Limits of Detection of Amplification-Free CRISPR-Cas12 and CRISPR-Cas13 Diagnostics.” Analytical chemistry vol. 94,27 (2022): 9826-9834. doi:10.1021/acs.analchem.2c01670</p>
+            <p  class="mhyref">[5] Ramachandran, Ashwin, and Juan G Santiago. “CRISPR Enzyme Kinetics for Molecular Diagnostics.” Analytical chemistry vol. 93,20 (2021): 7456-7464. doi:10.1021/acs.analchem.1c00525</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+                      
 
             
           </div>
