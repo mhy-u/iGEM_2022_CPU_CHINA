@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+  
+{% block title %}Intergrated human practice{% endblock %}
+{% block lead %}Explain how you would implement your project in the real world.{% endblock %}
+
+{% block page_content %}
+
+<!-- <div class="row mt-4">
+  <div class="col">
+    <div class="bd-callout bd-callout-info">
+      <h4>Silver Medal Criterion #4</h4>
+      <p>Explain how you would implement your project in the real world.<p>
+      <hr>
+      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
+    </div>
+  </div>
+</div> -->
+
+<style>
+  .mhyrightcontent img {
+    width:30%;
+    height:30%;
+  }
+</style>
+
+<div>
+  <!-- Pagination_header -->
+  <header>
+  <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/intergrated-human-practice.png"  class="mhypntopimg" alt="图片加载失败" >
+  <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/cat.png"  class="mhycatimg" alt="图片加载失败" >
+  </header>
+  <div class="mhypnmain">
+      <!-- left -->
+      <div class="mhypnleft">
+          <div class="mhyleftnavtitle">Intergrated human practice</div>
+          <div class="mhyleftnav">
+              <ul class="mhyleftcatlog">
+                  <li><a href="#title1"> Overview  </a></li>
+                  <li><a href="#title2">  </a></li>
+                  <li><a href="#title3">  </a></li>
+                  <li><a href="#title4">  </a></li>
+                  <li><a href="#title5">  </a></li>
+                  <li><a href="#title6">  </a></li>
+              </ul>
+          </div>
+          <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/dna.png" class="mhyDNAimg" alt="">
+      </div>
+      <!-- right -->
+      <div class="mhypnright">
+          <div class="mhyrightcontent">
+
+            <!-- 内容 -->
+            <h2 id='title1'><strong>Overview</strong></h2>
+            <p>To make our human practice more structured, we created a cycle of Design, Interview, Feedback, and Re-Design. During the brainstorming, a close relative of one team member died of cancer, which gave us the idea to promote early cancer screening. Through an online questionnaire, we learned that the public wanted us to use synthetic biology to solve problems of cancer.</p>
+            <p>Finally, comprehensively considering the expectations of the public and our research orientation, we decided to develop equipment to detect multiple cancers simultaneously and quickly to help users detect cancer in the early stage. Based on interviews with patients who suffered from cancer and literature research, we learned that early detection and treatment of cancer can greatly improve the efficacy of treatment and prognosis.</p>
+            <p>To find out whether our target group has this need, we contacted Dr. Tangming Liu, who has been working at Changning County Hospital in Baoshan, Yunnan, for 19 years. He thought our idea can effectively simplify sophisticated cancer detection methods in rural areas, enlarging its applications in areas with relatively low medical conditions for having more people participate in early cancer screening and thus achieving early detection and treatment for patients.</p>
+            <p>With his endorsement, we designed the project composed of the detection system into four parts: RT-RPA, CRISPR-Cas technology, DNA nanosponge, and advanced blood glucose meter. We kept improving our project design by reviewing the literature and actively communicating with professors and experts in various fields. In the wet labs, we listed setbacks we encountered and communicated with professors regularly to refine our project techniques.</p>
+            <p>We also enjoyed learning from other iGEMers and developed a partnership with BIT with expertise in hardware, and with their help, we were able to modify the glucose meter. We named the device Cancer Stalker, hoping that it would quantify cancer-related biomarkers in the user&#39;s body and accurately demonstrate the chance of users having cancer.</p>
+            <p>With the project in mind, we traveled to mountainous areas to investigate the prospects of its use, visited rural health clinics, and contacted Dr. Wu, who works at the health office in Panjiazhai Village, Mengtong Town, Changning County, Baoshan, Yunnan. She believed that our project could be applied in rural health clinics and has broad application prospects, bringing better health care to villagers.</p>
+            <p>We contacted companies that provide rapid detection services and introduced our project to them. They suggested we should also conduct research in hospitals and pharmacies in cities, where white-collar workers with high health pursuits are also our potential target users.</p>
+            <p>Therefore, we went to pharmacies to conduct research, comprehended the existing cancer screening devices in the market, and wrote a business plan to prepare for the implementation of the product. </p>
+            <h3 id='1identifying-the-problems-and-refining-project-pain-points'>1.Identifying the problems and refining project pain points</h3>
+            <p>During the brainstorming, a close relative of one team member died of malignant lung cancer. Overwhelming in grief, we couldn&#39;t help thinking if there were ways to lower the number of similar emergencies. As a result, lung cancer detection came into our sight. </p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps1.png" referrerpolicy="no-referrer" alt="img">
+            <span>Figure 1. Brainstorm</span>
+            <p>After team discussions, we conducted an online questionnaire to find out what problem the public wants us to solve using synthetic biology. Finally, combining the expectations of the public and our research orientation, we decided to develop equipment to detect multiple cancers simultaneously and quickly to help users detect cancer in the early stage.</p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps2.jpg" referrerpolicy="no-referrer" alt="img">
+            <span>Figure 2. Online questionnaire</span>
+            <p>Through preliminary literature research and interviews with cancer patients, we found that early diagnosis and treatment can significantly improve the efficacy and prognosis effect of patients. In relative-developed cities, people started paying more attention to health care and having regular physical examinations, so cancer is detected and treated earlier. However, in under-developed rural areas, due to the unbalanced distribution of medical resources, patients there usually have their cancer found at an advanced stage, which not only poses a fatal threat to patients&#39; lives but also brings economic burden to their families [1].</p>
+            <p>To find out whether our target group has this need, we contacted Dr. Tangming Liu, who has been working at Changning County Hospital in Baoshan, Yunnan, for 19 years. According to what he said, there is a lack of effective cancer screening methods in rural areas, and patients need to use CT or other invasive tests to diagnose cancer in county hospitals. He believes that effective rapid cancer detection equipment can greatly reduce the difficulty of cancer detection in rural areas and make cancer diagnosis faster.</p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps3.png" referrerpolicy="no-referrer" alt="img">
+            <span>Figure 3. Contact Dr. Tangming Liu</span>
+            <p>In summary, our team hopes to design a device that can rapidly detect early-stage cancer biomarkers using synthetic biology techniques, which can be used in rural areas with poor medical conditions and bring better medical care to people in underdeveloped areas.</p>
+            <h3 id='2preliminary-project-design'>2.Preliminary project design</h3>
+            <p>We hope that this kit will provide rapid detection of biomarkers in blood samples screened by our biochemical technology. The target lncRNA molecule is reverse-transcribed and amplified first, and then the amplified product is added to a γ-amylase system containing dissociative straight-stranded starch, Cas protein, and hydrogel. The product DNA activates the Cas protein and causes it to non-specifically cleave the single-stranded DNA in the system, releasing γ-amylase, which hydrolyzes the dissociative straight-stranded starch in the system to form glucose. Finally, the total amount of glucose is detected by dropping the reaction product onto the blood glucose test sheet.</p>
+            <p>Inspired by BIT, we decided to modify the blood glucose meter as our hardware to further improve the detection limits and sensitivity, making it more suitable for our detection system and accurately detecting the concentration of glucose to reflect the concentration of target lncRNA molecules in the blood sample.</p>
+            <h4 id='21-nucleic-acid-amplification-technology'>2.1 Nucleic acid amplification technology</h4>
+            <p>There is no doubt that PCR is the most widely used means of nucleic acid amplification. However, PCR technology requires strict operation skills and is expensive for single use. We contacted Dr. Liu Tangming, who works in the county hospital with 19 years of working experience and knows the medical conditions nearby well. He told us that the township hospitals had no more than the most basic examination equipment, which could not precisely control the reaction temperature. Our team wanted to develop a device that could be used in underdeveloped areas with poor medical conditions for rapid screening of early-stage cancers, but the high single-detection price of PCR and the expensive equipment contradicted our original intention.</p>
+            <p>Therefore, we decided to use isothermal amplification technology to reduce the single-use cost and the operational requirements for amplification. By reviewing the literature, we compared different isothermal amplification techniques and chose RT-RPA.</p>
+            <h4 id='22-hydrogel-formed-by-linear-polyacrylamide-and-dna-nucleic-acid-aptamer'>2.2 Hydrogel formed by linear polyacrylamide and DNA nucleic acid aptamer</h4>
+            <p>We consulted with Professor Yueqing Gu, dean of the College of Engineering of China Pharmaceutical University, on the design and use of hydrogels, who has designed and synthesized a variety of polymeric nano-drug carriers and viral vectors to enable early diagnosis and treatment of diseases.</p>
+            <p>We wanted to use a hydrogel formed by linear polyacrylamide and DNA nucleic acid aptamer to wrap γ-amylase, but she found that the Cas protein we used in the system was not significantly different in size from the γ-amylase wrapped inside the hydrogel, so it could not ensure wrapping γ-amylase by the linear polyacrylamide meanwhile allowing the Cas protein to enter and cleave the single-stranded DNA inside the linear polyacrylamide.</p>
+            <p>Taking her advice, we searched the articles, redesigned the hydrogels, and eventually chose to use DNA-protein hybrid hydrogels to encapsulate γ-amylase. We designed ssDNA1 and ssDNA2 and biotin-modified at the end of ssDNA1. We also added streptavidin to the system to further bind the assembled DNA to meet the nanostructural crosslinking degree of the encapsulated γ-amylase.</p>
+            <h4 id='23-selection-of-cas-proteins'>2.3 Selection of Cas proteins</h4>
+            <p>During the project design process, we noticed that CasΦ proteins reported in the literature are small in size and can recognize single base mismatches, associated with high specificity and low dependence on PAM sequences. These features enable it to be applied to the detection of more biomarkers and thus are widely used in frontier studies in the field of synthetic biology and iGEM project. Therefore, we hope to use CasΦ protein to bridge the RPA system and hydrogel system, thereby enhancing the specificity of the whole system.</p>
+            <p>We consulted with Associate Researcher Yunlong Liu, who has studied molecular diagnostic techniques related to the diagnosis and treatment of major diseases, and he pointed out that the cleavage rate of CasΦ for single-stranded DNA is lower than that of Cas12a and Cas14a proteins, which is not conducive to the goal of rapid detection. Therefore, he suggested that we could further improve the cleavage rate and specificity of the CasΦ protein for single-base mutations by rational design modification of the CasΦ protein.</p>
+            <p>After further discussion with Associate Researcher Yunlong Liu, we determined an experimental protocol by changing the key amino acid on the CasΦ protein&#39;s seventh helix and introducing the hairpin-structured crRNA. In the end, the Neg-K protein mutant with faster cleavage speed of dsDNA and H4sgRNA with lower off-target rate were screened.</p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps4.jpg" referrerpolicy="no-referrer" alt="img">
+            <span>Figure 4. Consulted with Associate Researcher Yunlong Liu</span>
+            <h3 id='3troubleshooting-and-re-designing'>3.Troubleshooting and Re-Designing</h3>
+            <p>In the process of designing and conducting the experiments, we consulted professors about the problems we encountered in the experiments to further polish our project techniques.</p>
+            <h4 id='31-hydrogel'>3.1 Hydrogel</h4>
+            <p>We found that the DNA-protein hybrid hydrogels obtained from the laboratory were consuming and low-productive. Although the DNA gel electrophoresis showed large molecular weight bands, the low-concentration hydrogels could not effectively wrap the γ-amylase.</p>
+            <p>Given the inconsistency of the experiment results with the envisioned ones, we consulted Professor Xu and reconstructed nucleic acid nanostructures with dsDNA under her suggestion, and further verified the good encapsulation efficiency of the nucleic acid nanostructures for γ-amylase. Cas proteins, when activated by the amplification products, can directly cleave the bare DNA single strands that make up the DNA nanostructures, releasing γ-amylase, hydrolyzing dissociative starch, and finally producing glucose that can be detected by our glucose meter.</p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps5.png" referrerpolicy="no-referrer" alt="img">
+            <p>Combining the reality of our project, we decided to make the DNA nanostructures into dry powder to make storage and transportation more convenient.</p>
+            <h5 id='32-cas-protein'>3.2 Cas protein</h5>
+            <p>After completing the modification of the CasΦ system, we compared the activity of the Cas12a, Cas14a, and Neg-K/H4 systems. Unfortunately, despite the significant improvement in cleavage rate and specificity of the Neg-K/H4 system compared to the WT/CrRNA system, its activity was still poor in comparison with the mature Cas12a and Cas14a systems.</p>
+            <p>We discussed this with Dr. Han again and he suggested that this might be due to the smaller size of CasΦ, which is only half of Cas12a, and therefore its enzymatic activity is relatively low. Cas14a, on the other hand, is small but functions as a dimer, so it still maintains a high activity when performing cleavage.</p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps6.jpg" referrerpolicy="no-referrer" alt="img">
+            <span>Figure 6. Consulted with Dr. Han</span>
+            <p>We verified and compared the ability of Cas12a and Cas14a to cleave nucleic acid nanostructures in the system. The results showed that the ability of Cas12a and Cas14a to cleave nucleic acid nanostructures to release and γ-amylase was similar, which was inconsistent with the relative activity of both in the FQ reporter gene experiment. So we consulted with Dr. Liu about the difference, and we agreed that this was because of the inability of the Cas protein to cleave the deepest part of the nucleic acid nanostructures, only effectively releasing the enzyme in the shallow part of the nucleic acid nanostructures while the enzyme in the deep part was difficult to be reached. Thus the difference in activity between the two in cleaving nucleic acid nanostructures is small.</p>
+            <p>Since Cas14a is reported in the literature to be more specific for target sequences and can sensitively identify single-base mismatches in the target, it better fits the need of our system for specific target identification. Meanwhile, Cas14a does not require as much PAM sequence as Cas12a, so we decided to use Cas14a in the final project design.</p>
+            <h4 id='33-blood-glucose-meter-modification'>3.3 Blood glucose meter modification</h4>
+            <p>Initially, our design of the hardware part was planning on upgrading commercially available blood glucose meters. By modifying the blood glucose test sheets, we hoped to improve the detection performance from the outside without changing the structure of the blood glucose meter. However, after discussion, we thought that this solution was not innovative enough for hardware modification and decided to renovate the structural design and functional development of the blood glucose meter.</p>
+            <p>During the collaboration, BIT introduced the Arduino Uno development board to us on which the structural design and functional development of the new hardware can be carried out with high expandability.</p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps7.png" referrerpolicy="no-referrer" alt="img">
+            <span>Figure 7. Communication with BIT</span>
+            <p>And now, the structure of the new hardware consists of three parts: signal input, signal analysis, and signal output. The input electrical signal is amplified by the hardware, analyzed by the central chip, and finally output through LED, display, and Bluetooth, so users can check the test result directly on their cell phone, which is convenient for users to monitor their health condition and also contributes to the development of digital healthcare. Our advanced blood glucose meter has a simple structure and can be operated many times to achieve repeated testing and requires no academic knowledge from the operator. To be noticed, the part is of high scalability and can be linked with other sensors and function modules to achieve further functions.</p>
+            <h4 id='conclusion-of-the-re-designing'>Conclusion of the re-designing</h4>
+            <p>The amplification product is added to a dry powder mixture containing dissociative straight-stranded starch, Cas14a protein, and nucleic acid nanostructures encapsulated with γ-amylase, and the amplified DNA molecule activates the Cas14a protein, which non-specifically cleaves the single-stranded DNA, causing the nucleic acid nanostructures to cleave and release γ-amylase, which hydrolyzes the dissociative straight-chain starch in the system to produce dissociative glucose molecules which can be detected by our advanced blood glucose meter.</p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps8.jpg" referrerpolicy="no-referrer" alt="img"> 
+            <span>Figure 8. Kit contents</p>
+            <h3 id='4practice-in-reality'>4.Practice in reality</h3>
+            <p>With the project in mind, we traveled to mountainous areas to investigate the prospects of its use, visited rural health clinics, and contacted Dr. Wu, who works at the health office in Panjiazhai Village, Mengtong Town, Changning County, Baoshan, Yunnan. </p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps9.png" referrerpolicy="no-referrer" alt="img">
+            <span>Figure 9. Contacted Dr. Wu</span>
+            <p>According to her words, the rural clinics are only equipped with basic medical examination equipment, which cannot diagnose or screen for cancer. Our device, however, can make the village health centers have certain cancer screening capabilities, which can be applied to the physical examination organized once a year in the village, bringing better healthcare to the villagers, with great application prospects.</p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps10.png" referrerpolicy="no-referrer" alt="img">
+            <span>Figure 10. Plan of township health center</span>
+            <p>We contacted companies that provide rapid detection services and introduced our project to them. They suggested we should also conduct research in hospitals and pharmacies in cities, where white-collar workers with high health pursuits besides people who live in poor medical conditions areas are also our potential target users.</p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps11.png" referrerpolicy="no-referrer" alt="img">
+            <span>Figure 11. Contacted companies that provide rapid detection services </span>
+            <span>Therefore, we went to pharmacies to conduct research, realizing that early cancer screening relating products are mostly sold in pharmacies that cooperate with hospitals. Therefore, inspired by this relationship, we can also increase the influence of our product by establishing partnerships with pharmacies and hospitals </span>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps12.png" referrerpolicy="no-referrer" alt="img">
+            <span>Figure 12. Conduct research in pharmacy</span>
+            <p>Based on the above research results, we wrote a business plan to prepare for the implementation of the product.</p>
+            <img src="file:///C:\Users\xzr\AppData\Local\Temp\ksohtml32756\wps13.jpg" referrerpolicy="no-referrer" alt="img">
+            <span>Figure 13. Business plan</span>
+            <p class="mhyref">[1]Xia C, Dong X, Li H, Cao M, Sun D, He S, Yang F, Yan X, Zhang S, Li N, Chen W. Cancer statistics in China and United States, 2022: profiles, trends, and determinants. Chin Med J (Engl). 2022 Feb 9;135(5):584-590. doi: 10.1097/CM9.0000000000002108. PMID: 35143424; PMCID: PMC8920425.</p>
+              
+
+
+          </div>
+      </div>
+  </div> 
+</div>
+
+
+
+
+{% endblock %}
