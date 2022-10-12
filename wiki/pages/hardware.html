@@ -59,12 +59,12 @@
             <div class="mhyleftnavtitle">Hardware</div>
             <div class="mhyleftnav">
                 <ul class="mhyleftcatlog">
-                    <li><a href="#title1">  </a></li>
-                    <li><a href="#title2">  </a></li>
-                    <li><a href="#title3">  </a></li>
-                    <li><a href="#title4">  </a></li>
-                    <li><a href="#title5">  </a></li>
-                    <li><a href="#title6">  </a></li>
+                    <li><a href="#title1"> Introduction </a></li>
+                    <li><a href="#title2"> Design Of Hardware </a></li>
+                    <li><a href="#title3"> Detection Principle </a></li>
+                    <li><a href="#title4"> Hardware Structure </a></li>
+                    <li><a href="#title5"> Item List </a></li>
+                    <li><a href="#title6"> Reference </a></li>
                 </ul>
             </div>
             <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/dna.png" class="mhyDNAimg" alt="">
@@ -78,17 +78,17 @@
 
               <h2 id='title1'>Introduction</h2>
               <p>Nowadays, though the technology of cancer-detecting has entered in the public view has become widespread as well as accurate,  the cost and inconvenience of these technology still remain problems.  On the other handF, for peoplecancer patients in remote areas, it remains a great challenge to get access to cancer screeningrelevant detection. Motivated by such demands, we developed a glucose-drive hardware system which enables people operate it easily of self-detection.,Combined with our wet-lab design thus, our product makes  screening out potential cancer patients even in underdeveloped areas with poor medical care possible. Quantification of the results of the wet lab by the improved blood glucose meter can reflect the content of our detection biomarker LINC00857.</p>
-              <h1 id='design-of-hardware'>Design Of Hardware</h1>
+              <h2 id='title2'>Design Of Hardware</h2>
               <p>TTo match the expression way of reporter gene, our design was on the basis of Arduino Uno electronics platform by Microchip to a large extent initially. However, in order to adapt to the specific detecting circumstance, we conducted some improvement and re-design.We have introduced an amplifying circuit to transfer the current of μA level to a detectable input signal and taken various approaches to display the results including the light, the screen and the Bluetooth communication. We measured the amount of glucose to be detected in the system via detector, and converting biological signal to electric signal and producing detectable read. User can receive results in a few minutes after inputting the biological signal. It is worth mentioning that the addition of hardware makes our platform more flexible, which enables various disease ranging from cancer to atherosclerosis be predicted preliminary according to the readings provided by the hardware, as long as the corresponding biomarkers are provided.
               The main structure of device consists of the chip and the detector. The design of chip can be modified to adapt to various detection demands. The detector can conduct electrochemical analysis of the chip inserted, and convert to specific digital read which shows on the LCD screen. Besides, the installed HC-05 bluetooth module can transfer the result to smart phone.</p>
               <p><img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture1.png" referrerpolicy="no-referrer" alt="1"></p>
               <span><strong>Figure1.</strong> Main Structure</span>
-              <h1 id='detection-principle'>Detection Principle</h1>
-              <h2 id='title2'>The Glucose&#39;s Redox Reaction</h2>
+              <h2 id='title3'>Detection Principle</h2>
+              <h3 id=''>The Glucose&#39;s Redox Reaction</h3>
               <p><strong>Glucose oxidase</strong> usually forms an oxidoreductase system with catalase (hydrogenperoxidase, HPD). When there is only glucose oxidase in the reaction system, glucose oxidase can catalyze the  of β-D-glucose to generate D-gluconolactone and hydrogen peroxide.</p>
               <p><img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture2.jpg" referrerpolicy="no-referrer" alt="2"></p>
               <span><strong>Figure 2.</strong> Principle of GODx oxidation</span>
-              <h2 id='title3'>The three-electrodes system and Testing Chip</h2>
+              <h3 id='title3'>The three-electrodes system and Testing Chip</h3>
               <p><strong>Working electrode</strong>: Electrons are produced here during the chemical reaction. This electrode is connected to the current-to-voltage amplifier.
               <strong>Reference electrode</strong>: Held at a constant voltage with respect to the working electrode to push the desired chemical reactions.
               <strong>Counter electrode</strong>: Supplies current to the working electrode.</p>
@@ -96,37 +96,37 @@
               <p><img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture3.png" referrerpolicy="no-referrer" alt="3"></p>
               <span><strong>Figure 3.</strong> Microchip AN1560 Chip Structure</span>
               <p>The chip for detector illustrated above works as a biological signal generator. Embedding glucose oxidase on the electrode which is exposed to the solutions to be assayed subsequently. While catalyzing the redox reaction, different concentration glucose causes different amount of electron transfer, thus the device gives out respective results eventually.</p>
-              <h2 id='ttitle4'>The overall principle</h2>
+              <h3 id='ttitle4'>The overall principle</h3>
               <p>The expression of reporter gene is closely related to amount of glucose produced, indicating that detection of glucose can indirectly reflect the reporter gene’s expression. When starch hydrolysis produces a large amount of glucose, glucose oxidase in the detection system can specifically catalyze the redox reaction, oxidizing and decomposing glucose into gluconic acid and hydrogen peroxide. The electron transferred during the redox reaction is then detected by pre-positioned electrodes. In this way, the biological signal can be converted into an electrical signal and produce a detectable read.</p>
-              <h1 id='hardware-structure'>Hardware Structure</h1>
-              <h2 id='title5'>The hardware components</h2>
+              <h2 id='title4'>Hardware Structure</h2>
+              <h3 id='title5'>The hardware components</h3>
               <p>The hardware consists of several electronic components， including the Arduino UNO demo board, a self-made signal receiver and the result display module.（The LCD has been placed with an I2C platform, which means that it is an equivalent circuit）</p>
               <p><img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture4.png" referrerpolicy="no-referrer" alt="4"></p>
               <span><strong>Figure 4.</strong> Circuit diagram</span>
-              <h3 id='arduino-uno-board'>Arduino Uno Board</h3>
+              <h4 id='arduino-uno-board'>Arduino Uno Board</h4>
               <p>Arduino consists of an open source hardware platform based on SCM and a special development environment. It can be used to develop interactive products, such as reading a large number of switch and sensor signals and controling various electric lamps, motors and other physical devices.Our device is based on this platform.
               Special acknowledgement to BIT team: they have introduced Arduino Uno to our team, which plays a significant role in the following developing process.</p>
               <p><strong>Special acknowledgement to BIT team</strong>: they have introduced Arduino Uno to our team, which plays a significant role in the following developing process.</p>
               <p><img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture5.png" referrerpolicy="no-referrer" alt="5"></p>
               <span><strong>Figure 5.</strong> Hardware-Arduino Uno</span>
-              <img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture6.png" referrerpolicy="no-referrer" alt="6">
+              <img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture6.jpg" referrerpolicy="no-referrer" alt="6">
             <span><strong>Figure 6.</strong> Hardware-Arduino Uno</span>
-              <h3 id='signal-receiver'>Signal Receiver</h3>
+              <h4 id='signal-receiver'>Signal Receiver</h4>
               <p>After the glucose&#39;s generation, the reaction system is exposed to the test chip. The GODx on the chip will catalyze the oxidation and the electrons will transfer. Then the current appears. The receiver samples the current and executes the sample amplification process via a triode, then convert the current to electrode voltage of the resistance, which can be detected as analog input.</p>
-              <img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture7.png" referrerpolicy="no-referrer" alt="7">
+              <img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture7.jpg" referrerpolicy="no-referrer" alt="7">
               <span><strong>Figure 7.</strong> Signal Receiver Part</span>
-              <h3 id='result-display'>Result Display</h3>
+              <h4 id='result-display'>Result Display</h4>
               <p>The signal input will be analyzed and judged by MCU, then reflected by the results displayed on LCD, LED and sent to smartphone via HC-05. Until now, we have achieved the accurate quantitative detection of glucose solution in a range of 1-30mmol/L concentration, and the detection line is as low as 0.3mmol/L. The potential of device is promising. The Arduino Uno supports synchronous input of multiple parallel signals, which indicates that the device is capable of handling several samples simultaneously. Besides, via establishing ranking system, the electric signal can be converted to a more concise and straight rank, functioning as an instructor of stage of disease.</p>
-              <p><img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture8.png" referrerpolicy="no-referrer" alt="8"></p>
+              <p><img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture8.jpg" referrerpolicy="no-referrer" alt="8"></p>
               <span><strong>Figure 8.</strong> Result Display Part</span>
-              <h3 id='program'>Program</h3>
+              <h4 id='program'>Program</h4>
               <p>The programs in Arduino are relatively simple whose main function is initiating the detection and sending the results to smart phone through Bluetooth module. (More details and downloads are presented on this page)
               Programs in Arduino is voltage convertion, result ranking, LCD displaying and result transferring.
               In order to eliminate the deviation caused by blood glucose, we designed a corresponding program to conduct the second detection.For the first test, use the diluted blood sample (in order to maintain the same volume with the subsequent reaction solution), and record the blood sample indicator as the reference value. For the second test, the reaction system which has added blood sample is used, and the reference value is subtracted from the test reading. In this way, we can ensure that the indicator only comes from the glucose generated in the reaction process, rather than the glucose existing in the blood originally, which helps reduce the error in the measurement.
               By grading the treated indicators, we can establish the corresponding relationship between content of biomarkers and indicators in the reaction solution and plot the standard curve.</p>
               <p><img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture9.png" referrerpolicy="no-referrer" alt="9"></p>
               <span><strong>Figure 9.</strong> Part of program</span>
-              <h2 id='title6'>Testing</h2>
+              <h3 id='title6'>Testing</h3>
               <p> We have configured a series of glucose solutions to detect the sensitivity and detection line of the device.</p>
               <figure><table>
               <thead>
@@ -135,13 +135,13 @@
               </table></figure>
               <p><img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture10.png" referrerpolicy="no-referrer" alt="10"></p>
               <span><strong>Figure 10.</strong> Testing Results</span>
-              <h1 id='item-list'>Item List</h1>
+              <h2 id='title5'>Item List</h2>
               <figure><table>
               <thead>
               <tr><th>item</th><th>quantity</th><th>cost(per/CNY)</th><th>cost（CNY）</th></tr></thead>
               <tbody><tr><td>Arduino UNO</td><td>1</td><td>119</td><td>119</td></tr><tr><td>Breadboard</td><td>2</td><td>11</td><td>22</td></tr><tr><td>Wires(package)</td><td>2</td><td>7.5</td><td>15</td></tr><tr><td>Resistance</td><td>centralized purchasing</td><td>2.5</td><td>2.5</td></tr><tr><td>Triode</td><td>1</td><td>0.3</td><td>0.3</td></tr><tr><td>LED</td><td>1</td><td>0.3</td><td>0.3</td></tr><tr><td>LCD1602 with I2C adaptor</td><td>1</td><td>18</td><td>18</td></tr><tr><td>HC-05</td><td>1</td><td>41</td><td>41</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td>Total</td><td>218.1</td></tr></tbody>
               </table></figure>
-              <h1 id='reference'>Reference</h1>
+              <h2 id='title6'>Reference</h2>
               <p class="mhyref">[1] High salinity Study on a novel glucose electrochemical sensor based on glucose oxidase [D]. Suzhou University, 2007</p>
               <p class="mhyref">[2] Ye Ruihong, Wang Wanzong, Lin Zhenyu Development of a novel glucose biosensor and its application in the determination of glucose content by luminol electrochemiluminescence method [J]. Physical and Chemical Testing (Chemical Volume), 2011,47 (07): 761-763+773</p>
                             
