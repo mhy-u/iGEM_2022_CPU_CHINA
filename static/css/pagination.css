@@ -43,7 +43,7 @@
     float: left;
     width: 25%;
     top: 20%;
-    font-size: 20%;
+    font-size: 30px;
     font-weight: 600;
     /* background-color: aqua; */
     opacity: 0.7;
@@ -100,7 +100,7 @@
     text-align: center;
     color: #202020;
     font-family: "MONTSERRAT-BLACK1";
-    font-size:25px;
+    font-size:30%;
     font-weight: 800;
     z-index: 3;
 }
