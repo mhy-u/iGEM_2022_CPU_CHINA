@@ -89,7 +89,7 @@
               <span><strong>Figure1.</strong> Main Structure</span>
               <h2 id='title3'>Detection Principle</h2>
               <h3 id=''>The Glucose&#39;s Redox Reaction</h3>
-              <p><strong>Glucose oxidase</strong> usually forms an oxidoreductase system with catalase. When there is only glucose oxidase in the reaction system, glucose oxidase can catalyze  β-D-glucose to generate D-gluconolactone and hydrogen peroxide.</p>
+              <p><strong>Glucose oxidase</strong> usually forms an oxidoreductase system with catalase. When there is only glucose oxidase in the reaction system, glucose oxidase can catalyze β-D-glucose to generate D-gluconolactone and hydrogen peroxide.</p>
               
               <figure style="display: flex; justify-content: center; align-items: center;">
                  <img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture2.jpg" width="60%" style="float:center;"> 
@@ -100,7 +100,7 @@
               <p><strong>Working electrode</strong>: Electrons are produced here during the chemical reaction. This electrode is connected to the current-to-voltage amplifier.
               <strong>Reference electrode</strong>: Held at a constant voltage with respect to the working electrode to push the desired chemical reactions.
               <strong>Counter electrode</strong>: Supplies current to the working electrode.</p>
-              <p>A precise reference voltage is applied to the reference electrode and a precise bias voltage (VBIAS) is applied to the op amp. In this way the precise potential difference is maintained across the working electrode and the reference electrode. This voltage is the stimulus which drives the test strip’s output current. The magnitude of the output current is then used to calculate the number of electrons produced</p>
+              <p>A precise reference voltage is applied to the reference electrode and a precise bias voltage (VBIAS) is applied to the op-amp. In this way the precise potential difference is maintained across the working electrode and the reference electrode. This voltage is the stimulus which drives the test strip’s output current. The magnitude of the output current is then used to calculate the number of electrons produced</p>
 
               <figure style="display: flex; justify-content: center; align-items: center;">
                  <img src="https://static.igem.wiki/teams/4308/wiki/hardware/picture3.jpg" width="60%" style="float:center;"> 
@@ -120,8 +120,7 @@
 
               <span><strong>Figure 4.</strong> Circuit diagram</span>
               <h4 id='arduino-uno-board'>Arduino Uno Board</h4>
-              <p>Arduino consists of an open source hardware platform based on SCM and a special development environment. It can be used to develop interactive products, such as reading a large number of switch and sensor signals and controling various electric lamps, motors and other physical devices.Our device is based on this platform.
-              Special acknowledgement to BIT team: they have introduced Arduino Uno to our team, which plays a significant role in the following developing process.</p>
+              <p>Arduino consists of an open source hardware platform based on SCM and a special development environment. It can be used to develop interactive products, such as reading a large number of switch and sensor signals and controling various electric lamps, motors and other physical devices.Our device is based on this platform.</p>
               <p><strong>Special acknowledgement to BIT team</strong>: they have introduced Arduino Uno to our team, which plays a significant role in the following developing process.</p>
              
               <figure style="display: flex; justify-content: center; align-items: center;">
@@ -152,7 +151,7 @@
 
               <span><strong>Figure 8.</strong> Result Display Part</span>
               <h4 id='program'>Program</h4>
-              <p>The programs in Arduino are relatively simple whose main function is initiating the detection and sending the results to smart phone through Bluetooth module. (More details and downloads are presented on this page)
+              <p>The programs in Arduino are relatively simple whose main function is initiating the detection and sending the results to smart phone through Bluetooth module. 
               Programs in Arduino is voltage convertion, result ranking, LCD displaying and result transferring.
               In order to eliminate the deviation caused by blood glucose, we designed a corresponding program to conduct the second detection.For the first test, use the diluted blood sample (in order to maintain the same volume with the subsequent reaction solution), and record the blood sample indicator as the reference value. For the second test, the reaction system which has added blood sample is used, and the reference value is subtracted from the test reading. In this way, we can ensure that the indicator only comes from the glucose generated in the reaction process, rather than the glucose existing in the blood originally, which helps reduce the error in the measurement.
               By grading the treated indicators, we can establish the corresponding relationship between content of biomarkers and indicators in the reaction solution and plot the standard curve.</p>
