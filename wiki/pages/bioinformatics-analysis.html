@@ -71,40 +71,67 @@
             Based on our work, we found that LINC00857 is differentially expressed in a variety of cancers and is a potential biomarker for diagnosis and detection of prognosis in various cancers.</p>
             <h2 id='title2'>Gene Expression Analysis</h2>
             <p>We used the built-in R (Version 3.6.4) tool of the Sangerbox<code>&lt;sup&gt;</code>[7]<code>&lt;/sup&gt;</code> to acquire plots of the UCSC XENA RNAseq data in TPM (transcripts per million reads) format for the Cancer Genome Atlas (TCGA) and the Genotype Tissue Expression Project, and the data is uniformly processed by the Toil process<code>&lt;sup&gt;</code>[8]<code>&lt;/sup&gt;</code>. Then we analyzed LINC00857 expression in all TCGA cancers at different pathological stages by using GEPIA2 (Interactive Gene Expression profiling, Version 2) tool. The log2[TPM (per million transcripts) +1] transformed expression data is applied to the violin diagram. For tumors without normal sample data in TCGA, we used the GTEx dataset to further evaluate the difference in LINC00857 expression in tumor and normal samples. We found that the level of LINC00857 had different expression in tumor samples (<strong>Figure 2A</strong>, P&lt;0.05). Then we used GEPIA2 to investigate the differential expression of LINC00857 between tumors and adjacent normal samples. As shown in <strong>Figure 2B</strong>, the expression level of LINC00857 in the tumor samples of KIRP, LUAD, PAAD and STAD higher than the corresponding control samples. We also used the exorBase 2.0 to evaluate the expression of LINC00857 in the human blood. As shown in <strong>Figure 2C-D</strong>, in the human blood samples, we found that the level of LINC00857 had different expression in BRCA, CRC, GBM, HCC, OV, PAAD and ESCC.</p>
-            <img src="image/bioinforaticsanalysis/picture1.png" referrerpolicy="no-referrer" alt="1">
+              <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture1.png" width="60%" style="float:center;"> 
+              </figure>
+
             <span><strong>Figure 1.</strong> | Interactive Body Map. The median expression of tumor and normal samples in body map by GEPIA2.</span>
-            <p><img src="image/bioinforaticsanalysis/picture2.png" referrerpolicy="no-referrer" alt="2"></p>
+              <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture2.png" width="60%" style="float:center;"> 
+              </figure>
+
             <span><strong>Figure 2.</strong> | Expression levels of LINC00857 in human tumors. (A) LINC00857 expression level comparison in TCGA project relative to the corresponding normal samples (GTEx database). *p &lt; 0.05; <strong>p &lt; 0.01; *</strong>p &lt; 0.001. (B) Expression level of LINC000857 in TCGA tumors vs. adjacent samples (if available) as visualized by GEPIA2. (C-D) Expression level of LINC000857 in human blood.</span>
             <p>We also analyzed the relationship between LINC00857 expression and tumor pathological staging using the GEPIA2 tool, which suggests that stage-specific expression changes in LINC00857 expression in case of many tumor types, such as UCEC, COAD, ESCA, KIRC, KIRP, LUSC, PAAD, SKCM, BLCA, LUAD and TGCT (<strong>Figure 3</strong>, all P&lt;0.05).</p>
-            <img src="image/bioinforaticsanalysis/picture3.png" referrerpolicy="no-referrer" alt="3">
+              <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture3.png" width="60%" style="float:center;"> 
+              </figure>
+
         <span><strong>Figure 3.</strong> | Stage-dependent expression level of LINC00857. Main pathological stages (stage I, stage II, stage III, and stage IV) of BLCA, COAD, ESCA, KIRC, KIRP, LUAD, LUSC, PAAD, SKCM, TGCT and UCEC were assessed and compared using GEPIA2 . Expression levels are shown as Log2 (TPM+1).</p></span>
             <h2 id='title3'>Genetic Alteration Analysis</h2>
             <p>We used cBioPortal tool (<a href='https://www.cbioportal.org/' target='_blank' class='url'>https://www.cbioportal.org/</a>) to collect the data of alteration frequency information across all TCGA tumors. Survival data, including PFS (Progress Free Survival) were compared for all the TCGA cancer types, with or without LINC00857genetic alteration.
             Human cancers develop due to the accumulation of genetic alterations. Therefore, we next wanted to explore LINC00857 gene alterations in human tumor samples. According to our analysis, the  LINC00857 alterations occured in a variety of cancers with “Amplification” as the primary type (<strong>Figure 4A</strong>). This supported the differential expression previously. To understand whether there is a relationship between certain genetic alterations in LINC00857 and the clinical survival prognosis of patients, we conducted systematic studies in various types of tumors and correlated them. Patients with genetic alteration of LINC00857 showed a worse prognosis in PFS (P=7.928e-3) compared with patients without LINC00857 alterations (<strong>Figure 4B</strong>).
-            <img src="image/bioinforaticsanalysis/picture4.png" referrerpolicy="no-referrer" alt="4"></p>
+              <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture4.png" width="60%" style="float:center;"> 
+              </figure>
+
             <span>><strong>Figure 4.</strong> | Mutational status of LINC00857 in TCGA tumors. We analyzed the mutational status of LINC00857 in TCGA tumors by using using the cBioPortal tool. The alteration frequency with mutation type (A) and mutation site (B) Analysis of the correlation between mutation status and PFS (Progression-free survival) using the cBioPortal tool.</p></span>
             <h2 id='title4'>Classifying Cancer Versus Normal Samples</h2>
             <p>We hope to use the expression of LINC00857 to assess its potential ability for cancer diagnosis. So we used the R (Version 3.6.3) tool with R package “pROC”(Version 1.17.0.1) to predict cancer. The ROC curve indicated that LINC00857 expression had good predictive power with an area under the curve (AUC) of 0.929 (95% confidence interval [CI] =0.911–0.947) to discriminate lung cancer samples from normal samples (<strong>Figure 5A</strong>). The expression of LINC00857 in ACC, COADREAD, DLBC, ESCA, GBM, KICH, KIRP, LAML, PAAD, PRAD, READ, STAD, THYM and UCS also has good discrimination.</p>
-            <img src="image/bioinforaticsanalysis/picture5.png" referrerpolicy="no-referrer" alt="5">
+              <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture5.png" width="60%" style="float:center;"> 
+              </figure>
+
         <span><strong>Figure 5</strong> | ROC curves for classifying cancer versus normal breast samples in the TCGA database.</p></span>
             <h2 id='title5'>Survival Analysis</h2>
             <p>We also hope to use the expression of LINC00857 to assess its potential ability for detection of prognosis. The prognostic values of LINC00857 was analyzed. Through all TCGA tumors RNAseq data and the prognostic data, gene expression profiling and interactive analyses were used for survival analyses. By using the GEPIA2, the OS and DFS were integrated to the Kaplan - Meier plots while calculating target gene ’s hazard ratios (HRs)..High expression of LINC00857 was associated with good prognosis of OS (Overall survival) for cancers including KIRP (<strong>Figure 6A</strong>). DFS (Disease Free Survival) analysis data (<strong>Figure 6E</strong>) showed that high expression of LINC00857 is associated with good prognosis for KIRP. High expression of LINC00857 was associated with worse prognosis of OS for cancers including LIHC, LUAD and PAAD (<strong>Figure 6B-D</strong>). DFS analysis data showed that high expression of LINC00857 is associated with worse prognosis for LIHC, LUAD and PAAD (<strong>Figure 6F-H</strong>). Based on this work, we found that LINC00857 is a potential biomarker for detection of prognosis in various cancers.
-            <img src="image/bioinforaticsanalysis/picture6.png" referrerpolicy="no-referrer" alt="6">
+              <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture6.png" width="60%" style="float:center;"> 
+              </figure>
+
             <span><strong>Figure 6.</strong> | Relationship between LINC00857 expression level and patient survival in GEPIA2. Relationship between LINC00857 gene expression and survival including overall survival (A) and disease-specific survival (B) were assessed in GEPIA2. The positive results are listed by using Kaplan-Meier curves.</p></span>
             <h1 id='expectation'>Expectation</h1>
             <h2 id='title6'>Atherosclerosis</h2>
             <p>This part could lead to the identification of potential diagnostic lncRNA markers for  atherosclerosis patients.</p>
             <h2 id='title7'>Identification of DEGs</h2>
             <p>The gene expression profiles of atherosclerosis (GSE202625) were downloaded from the Gene Expression Omnibus (GEO) database. After identifying the common differentially expressed genes (DEGs) of atherosclerosis by using the R package “DESeq2”<code>&lt;sup&gt;</code>[9]<code>&lt;/sup&gt;</code>. A total of 186 DEGs were identified in the atherosclerosis patients combined dataset using the DESeq2 method, of which 97 were upregulated and 89 were downregulated. The volcano plot of atherosclerosis DEGs are shown in <strong>Figure 7</strong>. Among them, 15 lncRNAs are candidate diagnostic markers for atherosclerosis.</p>
-            <img src="image/bioinforaticsanalysis/picture7.png" referrerpolicy="no-referrer" alt="7">
+              <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture7.png" width="60%" style="float:center;"> 
+              </figure>
+
             <span><strong>Figure 7.</strong> | The volcano map of GSE202625.</p></span>
             <h2 id='title8'>Machine Learning</h2>
             <p>LASSO is a regression method for selecting a variable to improve the predictive accuracy and is also a regression technique for variable selection and regularization to improve the predictive accuracy and comprehensibility of a statistical model <code>&lt;sup&gt;</code>[10,11]<code>&lt;/sup&gt;</code>.  “glmnet” <code>&lt;sup&gt;</code>[12]<code>&lt;/sup&gt;</code> R packages were used to perform LASSO regression. The intersection genes of LASSO was considered as candidate hub lncRNAs in atherosclerosis diagnosis. Six lncRNAs (MIR193BHG, LINC01309, HMBOX1-IT1, LINC01389, LINC02156 and LINC01187) were identified for the final biomarkers (<strong>Figure 8A,B</strong>).</p>
-            <img src="image/bioinforaticsanalysis/picture8.png" referrerpolicy="no-referrer" alt="8">
+              <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture8.png" width="60%" style="float:center;"> 
+              </figure>
+
         <span><strong>Figure 8.</strong> | Machine learning in screening candidate diagnostic biomarkers for atherosclerosis. (A, B) Biomarkers screening in the Lasso model.</p></span>
             <h2 id='title9'>Diagnostic Value Assessment</h2>
             <p>We used the R (Version 3.6.3) tool with R package “pROC”(Version 1.17.0.1) to to predict atherosclerosis. The ROC curve indicated that lncRNAs expression had good predictive power with an area under the curve (AUC) of 0.941 (95% confidence interval [CI] =0.881-1.000) to discriminate latherosclerosis from normal (<strong>Figure 9</strong>). Therefore, the lncRNAs we selected had a high accuracy in diagnosing atherosclerosis.</p>
-            <img src="image/bioinforaticsanalysis/picture9.png" referrerpolicy="no-referrer" alt="9">
+              <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture9.png" width="60%" style="float:center;"> 
+              </figure>
+
             <span><strong>Figure 9.</strong> | The ROC curve of candidate lncRNAs</span>
             <h2 id='title10'>Reference</h2>
             <p class="mhyref">1.Wang, L., He, Y., Liu, W., Bai, S., Xiao, L., Zhang, J., Dhanasekaran, S.M., Wang, Z., Kalyana-Sundaram, S., Balbin, O.A., et al. (2016). Non-coding RNA LINC00857 is predictive of poor patient survival and promotes tumor progression via cell cycle
