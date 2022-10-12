@@ -397,7 +397,7 @@
             <p>In summary, our project achieves a kinetic simulation of the entire assay system. In the RT-RPA part, we took the DNA concentration at 900s as the output by fitting the analysis to the relevant parameters in isothermal amplification, using the RNA of 1E-12M as input. In the Cas section, we took the DNA concentration output from the previous step as input, modelled the enzymatic kinetics of the Cas-gRNA-activator complex trans-cleavage activity and output the concentration of cleaved reporter DNA just reaching plateau. In the γ-amylase section, we converted the cleaved reporter DNA concentration output in the previous step to the γ-amylase release concentration and constructed a kinetic model of γ-amylase hydrolysis with competitive inhibition of the product, taking the glucose concentration just reaching plateau as the output. Finally, in the electrochemical section, we converted the glucose concentration to an electrical signal and obtained the glucometer readings.</p>
             <h2 id='title6'>Molecular dynamics simulation for mutants</h2>
             <p>We used the optimized system to carry out molecular dynamics simulation for the above mutants. According to the gmx rms module in the Gromacs package, we calculate the RMSD of different components in the simulation system. We analyzed the changes of six mutants in the system, and analyze the changes in the skeleton carbon atom of the protein and the central structure of the entire protein.</p>
-            <p>The average structure after 400 ns of the simulation was extracted to check the RMSD and Rg of the simulated trajectory respectively. As shown in <b>Figure 3</b>, in the two mutant types of CasΦ (Mut-1 and Mut-4), the RMSD for the whole system is far away, with a large shift after 100 ns, after which it keeps converging. While the RMSD of the wild-type CasΦ and other mutants present the stability of about 0.32 nm after 150 ns, with less vibration of the system. This stability result may be related to the conformational changes induced by hydrogen bonds within the protein molecule.</p>
+            <p>The average structure after 400 ns of the simulation was extracted to check the RMSD and Rg of the simulated trajectory respectively. As shown in <b>Figure 25</b>, in the two mutant types of CasΦ (Mut-1 and Mut-4), the RMSD for the whole system is far away, with a large shift after 100 ns, after which it keeps converging. While the RMSD of the wild-type CasΦ and other mutants present the stability of about 0.32 nm after 150 ns, with less vibration of the system. This stability result may be related to the conformational changes induced by hydrogen bonds within the protein molecule.</p>
             <p><html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
                     <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/molecular/picture1.png" width="60%" style="float:center;">
@@ -407,8 +407,8 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <p><b>Figure 1.</b> Average RMSD value for wild-type CasΦ and mutants.</p>
-            <p>As shown in the <b>Figure 2</b>, after 400 ns of folding, the molecular structure of the seven proteins has partially changed. After 350 ns, they begin to converge and maintain a relatively stable fluctuation range. Among them, the conformational changes of Mut-3 and Mut-4 after a period of equilibrium before 200 ns are small, the convergence degree is high, and the system stability is good. The wild-type protein has a large structural change at 60 and 150 ns, and the internal interaction force is unstable after three-dimensional folding. In the positive control group (Mut-1 and Mut-2), the basic fluctuation range was small after 100 ns, and some small fluctuations occurred at 3.66 nm. </p>
+            <p><b>Figure 25.</b> Average RMSD value for wild-type CasΦ and mutants.</p>
+            <p>As shown in the <b>Figure 26</b>, after 400 ns of folding, the molecular structure of the seven proteins has partially changed. After 350 ns, they begin to converge and maintain a relatively stable fluctuation range. Among them, the conformational changes of Mut-3 and Mut-4 after a period of equilibrium before 200 ns are small, the convergence degree is high, and the system stability is good. The wild-type protein has a large structural change at 60 and 150 ns, and the internal interaction force is unstable after three-dimensional folding. In the positive control group (Mut-1 and Mut-2), the basic fluctuation range was small after 100 ns, and some small fluctuations occurred at 3.66 nm. </p>
             <p><html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
                     <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/molecular/picture2.png" width="60%" style="float:center;">
@@ -418,8 +418,8 @@
                     </figcaption>
                 </figure>
             </html>
-            <p><b>Figure 2.</b> Average Rg value for wild-type CasΦ and mutants.</p>
-            <p>As shown in <b>Figure 3</b>, in the simulated 400 ns, the energy fluctuation amplitude of the whole system is small, the wild-type protein (WT) is the lowest, and the structural stability is the best, followed by the stability of Mut-2 and Mut-3, and the energy of the whole system remains unchanged.</p>
+            <p><b>Figure 26.</b> Average Rg value for wild-type CasΦ and mutants.</p>
+            <p>As shown in <b>Figure 27</b>, in the simulated 400 ns, the energy fluctuation amplitude of the whole system is small, the wild-type protein (WT) is the lowest, and the structural stability is the best, followed by the stability of Mut-2 and Mut-3, and the energy of the whole system remains unchanged.</p>
             <p><html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
                     <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/molecular/picture3.png" width="60%" style="float:center;">
@@ -429,8 +429,8 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <p><b>Figure 3.</b> Average Gromacs energies value for wild-type CasΦ and mutants.</p>
-            <p>During the simulation process, the number of intramolecular hydrogen bonds in each group of proteins fluctuated to a certain extent, and changed at about 490. Among them, the vibration amplitude of Mut-4 and Mut-6 is smaller than that of other proteins, and the number of hydrogen bonds in the system has been maintained all the time, indicating that the intramolecular interaction is relatively stable, and it is easy to maintain a more rigid protein conformation. (<b>Figure 4</b>)</p>
+            <p><b>Figure 27.</b> Average Gromacs energies value for wild-type CasΦ and mutants.</p>
+            <p>During the simulation process, the number of intramolecular hydrogen bonds in each group of proteins fluctuated to a certain extent, and changed at about 490. Among them, the vibration amplitude of Mut-4 and Mut-6 is smaller than that of other proteins, and the number of hydrogen bonds in the system has been maintained all the time, indicating that the intramolecular interaction is relatively stable, and it is easy to maintain a more rigid protein conformation. (<b>Figure 28</b>)</p>
             <p><html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
                     <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/molecular/picture4.png" width="60%" style="float:center;">
@@ -440,8 +440,8 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <p><b>Figure 4.</b> Intramolecular hydrogen bonds value for wild-type CasΦ and mutants.</p>
-            <p>During the simulation, the displacement range of each atom is small, and it is basically stable. In the Mut-3 and Mut-5 protein groups, the amino acids at 202-218 shifted by 1 nm, indicating that the intramolecular force has changed. The positive control group Mut-1 and Mut-2 basically maintained the displacement below 0.5 nm, and the atomic vibration amplitude was small, indicating that the system was stable. (<b>Figure 5</b>)</p>
+            <p><b>Figure 28.</b> Intramolecular hydrogen bonds value for wild-type CasΦ and mutants.</p>
+            <p>During the simulation, the displacement range of each atom is small, and it is basically stable. In the Mut-3 and Mut-5 protein groups, the amino acids at 202-218 shifted by 1 nm, indicating that the intramolecular force has changed. The positive control group Mut-1 and Mut-2 basically maintained the displacement below 0.5 nm, and the atomic vibration amplitude was small, indicating that the system was stable. (<b>Figure 29</b>)</p>
             <p><html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
                     <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/molecular/picture5.png" width="60%" style="float:center;">
@@ -451,7 +451,7 @@
                     </figcaption>
                 </figure>
             </html>
-            <p><b>Figure 5.</b> Average RMSF value for wild-type CasΦ and mutants.</p>
+            <p><b>Figure 29.</b> Average RMSF value for wild-type CasΦ and mutants.</p>
             <h2 id='title7'>Appendix 1.Substance names,parameter names and mathematical equations involved in the model of RPA.</h2>
             <h3 id='11list-of-substance-names-involved-in-rpa'>1.1List of substance names involved in RPA</h3>
             <p><html>
