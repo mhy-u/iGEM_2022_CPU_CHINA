@@ -52,35 +52,67 @@
             <!-- 内容 -->
             <h2 id='title1'>Overview</h2>
             <p>To provide health security for individuals in disadvantaged areas, our team works on early cancer diagnosis and preliminary identification of different malignancies. We employed bioinformatics to identify a lncRNA molecule that is strongly correlated to the occurrence and progression of more than 20 different types of cancer, and then created a matched point-of-care detection platform. The platform(<strong>Figure 1</strong>) is made up of four parts intotal, including RT-RPA, CRISPR-Cas14a, DNA nanosponge and electrochemical detection. Through the RT-RPA, our target can be amplified to certain concentration, satisfying our detection limit.Then Cas14a would be fully activated by target sequence and therefore cleavage the DNA nanosponge which would release γ-amylase to break down free straight-chain starch. Glucose is produced subsequently and can be quantitatively detected. As a result, this platform can quantitatively identify the expression of lncRNA in human blood without the need of costly devices and is quite user-friendly. It is a valuable tool for estimating the chance of having cancer.</p>
-            <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture1.png" referrerpolicy="no-referrer" alt="1665539062769">
+
+            <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture1.png" width="60%" style="float:center;"> 
+              </figure> 
+            
             <span><strong>Figure .1</strong> Our platform design for detecting biomarker </span>
             <h2 id='title2'>Detection Platform</h2>
             <h4 id='biomarker'>Biomarker</h4>
             <p>In the search for detection biomarker, our model found differential expression of LINC00857 in 25 cancers by comparing the expression of this molecule in each tumor group and normal group using TCGA combined with GTEx database. Then, we further explored the application of LINC00857 in cancer staging. Using the GEPIA2 database, we found that it was also differentially expressed in the staging of multiple cancers, such as endometrial cancer, colon cancer, esophageal cancer, pancreatic cancer, and cutaneous melanoma. As shown in (<strong>Figure 2</strong>), the expression level of LINC00857 in some tumor tissues higher than the corresponding control tissues, indicating the potential of lnc00857 as a cancer staging marker.At the same time, the molecule correlates with the prognosis of cancer patients, which means that by detecting the expression of this LINCRNA, we can not only achieve the primary screening of many cancers, but also determine the future survival of some cancer patients. Therefore, we chose LINC00857 as our detection biomarker, and designed the supporting detection system.</p>
-            <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture2.png" referrerpolicy="no-referrer" alt="1665538500973">
+
+            <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture2.png" width="60%" style="float:center;"> 
+              </figure> 
+           
             <span><strong>Figure .2</strong> Expression level of LINC000857 in TCGA tumors vs. adjacent tissues (if available) as visualized by GEPIA2.</span>
             <h4 id='isothermal-amplification'>Isothermal amplification</h4>
-            <p>Due to its excellent efficiency, we selected Reverse Transcription and Recombinase Polymerase Isothermal Amplification (RT-RPA) （<strong>Figure 3</strong>）as a method to obtain target amplification[1]. The RT-RPA method is based on the idea that the recombinant enzyme first converts RNA into cDNA using reverse transcriptase to create a nucleoprotein filament with a single stranded oligonucleotide skeleton, and then scans the homologous sequence of the double stranded DNA target[2]. The target area on the template will be exponentially amplified after the primer finds the homologous sequence and the chain exchange reaction forms and initiates DNA synthesis. To stop future replacement, the replaced DNA strand interacts with the SSB protein. In this system, we synthesized the distinctive fragment of LINC00857. Since we did not utilize human materials (blood) in the experiment, we created two primers that can accomplish rapid and effective amplification within 10 minutes at 42 ℃, which further indicates its fast, convenient and efficient performance. Here follows a video of the RPA principle.</p>
-            <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture3.png" referrerpolicy="no-referrer" alt="img">
-            <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture4.png" referrerpolicy="no-referrer" alt="1665539210206">
+            <p>Due to its excellent efficiency, we selected Reverse Transcription and Recombinase Polymerase Isothermal Amplification (RT-RPA) （<strong>Figure 3</strong>）as a method to obtain target amplification<sup>[1]</sup> . The RT-RPA method is based on the idea that the recombinant enzyme first converts RNA into cDNA using reverse transcriptase to create a nucleoprotein filament with a single stranded oligonucleotide skeleton, and then scans the homologous sequence of the double stranded DNA target<sup>[2]</sup> . The target area on the template will be exponentially amplified after the primer finds the homologous sequence and the chain exchange reaction forms and initiates DNA synthesis. To stop future replacement, the replaced DNA strand interacts with the SSB protein. In this system, we synthesized the distinctive fragment of LINC00857. Since we did not utilize human materials (blood) in the experiment, we created two primers that can accomplish rapid and effective amplification within 10 minutes at 42 ℃, which further indicates its fast, convenient and efficient performance. Here follows a video of the RPA principle.</p>
+
+            <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture0.png" width="60%" style="float:center;"> 
+              </figure> 
+
+              <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture3.png" width="60%" style="float:center;"> 
+              </figure> 
+
+            
             <span><strong>Figure 3.</strong> Principle of Recombinase Polymerase Isothermal Amplification (RT-RPA)</span>
             <h4 id='crispr-cas14a'>CRISPR-Cas14a</h4>
             <p>CRISPR-Cas systems are potential biosensing technologies for nucleic acid detection as a result of the recent discovery of a family of Cas nucleases with trans-cleavage activity.</p>
-            <p>We chose Cas12a, Cas14a, and CassΦ from the Cas12 family as three candidates for our system. Among them, the most researched one is Cas12a, which has been extensively used in in vitro detection systems because of its precision and effectiveness. The CRISPR-Cas14a system is currently the smallest functioning CRISPR system discovered[3]. When performing nucleic acid splicing, it is independent of the PAM sequence and is capable of detecting single base mismatches,which makes it suitable for precise detection.  CasΦ, a newly reported Cas nuclease, has a good target recognition specificity, and its size is only half of Cas12a[4]. We finally settle on Cas14a as the connection between RT-RPA and DNA nanosponge in the system by contrasting Cas14a with CasΦ and Cas12a activity verification.</p>
+            <p>We chose Cas12a, Cas14a, and CassΦ from the Cas12 family as three candidates for our system. Among them, the most researched one is Cas12a, which has been extensively used in in vitro detection systems because of its precision and effectiveness. The CRISPR-Cas14a system is currently the smallest functioning CRISPR system discovered<sup>[3]</sup> . When performing nucleic acid splicing, it is independent of the PAM sequence and is capable of detecting single base mismatches,which makes it suitable for precise detection.  CasΦ, a newly reported Cas nuclease, has a good target recognition specificity, and its size is only half of Cas12a<sup>[4]</sup> . We finally settle on Cas14a as the connection between RT-RPA and DNA nanosponge in the system by contrasting Cas14a with CasΦ and Cas12a activity verification.</p>
             <p>By turning on its side branch cleavage activity after attaching to single or double stranded amplification products, Cas14a can cleave non-specific single stranded DNA fragments. Therefore, we made the decision to use it to decompose the DNA nanosponge. When our amplified product activated Cas14a (<strong>Figure 4</strong>), it cleaved single-stranded DNA randomly, causing the DNA nanostructure to disintegrate and the release of -amylase, which accelerated the hydrolysis of amylose and generated a significant amount of glucose. Overall, the Cas14a plays the role of signal hub ,integrating upstream information for our next parts.</p>
-            <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture5.png" referrerpolicy="no-referrer" alt="1665539267038">
+
+              <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture4.png" width="60%" style="float:center;"> 
+              </figure> 
+            
             <span><strong>Figure 4.</strong> Cas14a is activated and cleaves the F-Q reporter.</span>
             <h4 id='dna-nanosponge'>DNA Nanosponge</h4>
-            <p>We refer to the hydrogel encapsuling enzyme scheme of James Yang [5] and YiYang [6] of Chaoyong. In order to make this part into freeze-dried powder for easy preservation, we have designed γ- Amylase coated DNA nano sponge, which is constructed by RCA (rolling loop amplification) amplification system and MBD-SA fusion protein structure(<strong>Figure 5</strong>).</p>
-            <p>MBD is a family of methyl-cpg-binding domain proteins, known to include 11 proteins. And all of them contain a highly conserved protein domain, named MBD domain[7]. In our design, the MBD-SA fusion protein with 4 MBD structural domains recognizes and binds the repetitive sequence (CGAT CCGCGGC TCTCTC GCCGCGG ATCG) in the stem-loop structure in RCA-amplified DNA. Then, MBD-SA binds ssDNA and forms DNA nanostructure by self-assembling wrapped amylase. When Cas14a was activated, it can cleave DNA nanosponge, thereby releasing γ-amylase to break down free straight-chain starch for glucose detection<strong>(Figure 6)</strong>.</p>
-            <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture6.png" referrerpolicy="no-referrer" alt="1665539347106">
+            <p>We refer to the hydrogel encapsuling enzyme scheme of James Yang <sup>[5]</sup> and YiYang <sup>[6]</sup>  of Chaoyong. In order to make this part into freeze-dried powder for easy preservation, we have designed γ- Amylase coated DNA nano sponge, which is constructed by RCA (rolling loop amplification) amplification system and MBD-SA fusion protein structure(<strong>Figure 5</strong>).</p>
+            <p>MBD is a family of methyl-cpg-binding domain proteins, known to include 11 proteins. And all of them contain a highly conserved protein domain, named MBD domain <sup>[7]</sup> . In our design, the MBD-SA fusion protein with 4 MBD structural domains recognizes and binds the repetitive sequence (CGAT CCGCGGC TCTCTC GCCGCGG ATCG) in the stem-loop structure in RCA-amplified DNA. Then, MBD-SA binds ssDNA and forms DNA nanostructure by self-assembling wrapped amylase. When Cas14a was activated, it can cleave DNA nanosponge, thereby releasing γ-amylase to break down free straight-chain starch for glucose detection<strong>(Figure 6)</strong>.</p>
+
+            <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture5.png" width="60%" style="float:center;"> 
+              </figure> 
+            
             <span><strong>Figure 5.</strong> Process of RCA and DNA nanostructure formation</span>
-            <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture7.png" referrerpolicy="no-referrer" alt="1665539368415">
+
+            <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture6.png" width="60%" style="float:center;"> 
+              </figure> 
+
+            
             <span><strong>Figure 6.</strong>Process of Cas14a cleavering DNA nanosponge</span>
             <h4 id='electrochemical-detection'>Electrochemical detection</h4>
             <p>We selected glucose created in the previous phase as the biological signal since its concentration is closely connected to the quantity of our targets. We designed a novel hardware framework that intuitively translate biological inputs into detection outcomes.</p>
             <p>A redox reaction will take place and current will be produced when the glucose made by the nanosponge is exposed to the glucose oxidase contained in the electrode. The hardware receives, and then performs relevant analysis. This signal will be evaluated in the central chip and converted to output by a preset program. The findings can be seen right away on the LED and LCD display, and the Bluetooth module can transfer the data to a smartphone. Here follows a video of electrochemical detection of glucose concentration.</p>
-            <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture8.png" referrerpolicy="no-referrer" alt="img">
+            <figure style="display: flex; justify-content: center; align-items: center;">
+                 <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/design/picture7.png" width="60%" style="float:center;"> 
+              </figure> 
+
             <h4 id='reference'>Reference</h4>
             <p class="mhyref">[1] Piepenburg O, Williams C H,Stemple D L, et al. DNA Detection Using Recombination Proteins[J]. PLoS Biology, 2006, 4(7):e204.</p>
             <p class="mhyref">[2] Jiao Y, Xu C, Li J, Gu Y, Xia C, Xie Q, Xie Y, An M, Xia Z, Wu Y. Characterization and a RT-RPA assay for rapid detection of Chilli Veinal mottle virus (ChiVMV) in tobacco. Virol J. 2020 Mar 10;17(1):33. doi: 10.1186/s12985-020-01299-w. PMID: 32156292; PMCID: PMC7065361.</p>
