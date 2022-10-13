@@ -8,7 +8,7 @@
     <div class="container">
   
       <!---- TEAM NAME ---->
-      <a class="navbar-brand" href="#">CPU_CHINA</a>
+      <a class="navbar-brand" href="#" style="color:#ffffff;text-decoration:none;font-family: Rubik-Black;">CPU_CHINA</a>
   
       <!---- SMALL SCREEN MENU ICON ---->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,17 +20,17 @@
   
           <!---- HOME ---->
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+            <a class="nav-link" href="{{ url_for('index') }}" style="color:#ffffff;text-decoration:none;font-family: Rubik-Black;">Home</a>
           </li>
   
          
   
           <!---- PROJECT ---->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#ffffff;text-decoration:none;font-family: Rubik-Black;">
               Project
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="color:#ffffff;text-decoration:none;font-family: Rubik-Black;">
               <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">Description</a></li>
               <li><a class="dropdown-item" href="{{ url_for('pages', page='design') }}">Design</a></li>
               <li><a class="dropdown-item" href="{{ url_for('pages', page='proof-of-concept') }}">Proof of Concept</a></li>
@@ -50,7 +50,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Parts
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="color:#ffffff;text-decoration:none;font-family: Rubik-Black;">
               <!-- <li><a class="dropdown-item" href="{{ url_for('pages', page='part-collection') }}">Part Collection</a></li> -->
               <li><a class="dropdown-item" href="{{ url_for('pages', page='parts') }}">Parts</a></li>
               <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
@@ -110,7 +110,9 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Awards
             </a>
-            <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
+              <!--
               <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}">Education</a></li>
               <li><a class="dropdown-item" href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a></li>
               <li><a class="dropdown-item" href="{{ url_for('pages', page='hardware') }}">Hardware</a></li>
@@ -121,8 +123,8 @@
               <li><a class="dropdown-item" href="{{ url_for('pages', page='software') }}">Software</a></li>
               <li><a class="dropdown-item" href="{{ url_for('pages', page='sustainable') }}">Sustainable</a></li>
             </ul> -->
+
           </li>
-          <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
 
   
         </ul>
