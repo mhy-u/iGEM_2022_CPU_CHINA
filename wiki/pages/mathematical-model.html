@@ -55,15 +55,17 @@
           <div class="mhyleftnavtitle">mathematical model</div>
           <div class="mhyleftnav">
               <ul class="mhyleftcatlog">
-                  <li><a href="#title1"> Reverse transcription isothermal amplification model  </a></li>
+                  <li><a href="#title1"> Dynamics model  </a></li>
+                  <!-- <li><a href="#title1"> Reverse transcription isothermal amplification model  </a></li>
                   <li><a href="#title2"> Enzyme kinetic model for trans cleavage of CRISPR-Cas system </a></li>
                   <li><a href="#title3"> Model of starch hydrolysis by γ-Amylase  </a></li>
                   <li><a href="#title4"> Electrical signal conversion model for glucose concentration </a></li>
-                  <li><a href="#title5"> Kinetic simulation of the entire detection system </a></li>
-                  <li><a href="#title6"> Molecular dynamics simulation for mutants</a></li>
-                  <li><a href="#title7"> Appendix 1.Substance names,parameter names and mathematical equations involved in the model of RPA </a></li> 
-                  <li><a href="#title8"> Appendix 2.Substance names,parameter names and mathematical equations involved in enzyme kinetic model for trans cleavage of CRISPR-Cas system and γ-Amylase hydrolysis model </a></li>
-                  <li><a href="#title9"> References </a></li>
+                  <li><a href="#title5"> Kinetic simulation of the entire detection system </a></li> -->
+                  <li><a href="#title2"> Molecular dynamics simulation for mutants</a></li>
+                  <li><a href="#title3"> Appendix </a></li>
+                 <!--  <li><a href="#title7"> Appendix 1.Substance names,parameter names and mathematical equations involved in the model of RPA </a></li> 
+                  <li><a href="#title8"> Appendix 2.Substance names,parameter names and mathematical equations involved in enzyme kinetic model for trans cleavage of CRISPR-Cas system and γ-Amylase hydrolysis model </a></li> -->
+                  <li><a href="#title4"> References </a></li>
               </ul>
           </div>
           <img src="https://static.igem.wiki/teams/4308/wiki/static/imgs/dna.png" class="mhyDNAimg" alt="">
@@ -74,9 +76,9 @@
 
             <!-- 内容 -->
             
-            
+            <h2 id="title1">Dynamics model</h2>
             <p>Our Dynamics Modeling section ran throughout the project. Corresponding to the four parts of the project design, we built four sub-models: reverse transcription isothermal amplification model, enzyme kinetic model for trans cleavage of CRISPR-Cas system, Model of starch hydrolysis by γ-Amylase and Electrical signal conversion model for glucose concentration.  Each sub-model was connected using upstream sub-model outputs as the downstream sub-model inputs. Finally, we simulated the kinetics behavior of the entire detection system, based on ODE equations and experimental data. Simulation output and wet lab experiment data reached a R-squared greater than 0.98. Mathematical models were solved using R as a software tool.</p>
-            <h2 id='title1'>Reverse transcription isothermal amplification model</h2>
+            <h3 style="text-shadow: 1px;">Reverse transcription isothermal amplification model</h3>
             <h3 id='reverse-transcription'>Reverse transcription</h3>
             <p>The simplified linc00857 reverse transcription process is shown in the following equation. The reaction process is rapid relative to the DNA isothermal amplification process and can be approximated as the amount of RNA added being reverse transcribed to the amount of DNA template in a very short time.
             <html>
@@ -168,7 +170,7 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <h2 id='title2'>Enzyme kinetic model for trans cleavage of CRISPR-Cas system</h2>
+            <h3 style="text-shadow: 1px;">Enzyme kinetic model for trans cleavage of CRISPR-Cas system</h3>
             <h3 id='cas-grna-specific-activation'>Cas-gRNA specific activation</h3>
             <p>Since the Cas-gRNA-specific activation step is strongly influenced by the base sequence, and it is often performed together with the trans-cleavage activity verification experiment during the wet-lab reaction. Therefore, we treat this process in the same way as the reverse transcription process. It is assumed that the step is very fast, i.e. the amount of DNA input in the previous step can be approximated as the amount of Cas-gRNA-activator complex generated in the next step.</p>
             <h4 id='response-mechanism'>Response mechanism </h4>
@@ -314,7 +316,7 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <h2 id='title3'>Model of starch hydrolysis by γ-Amylase</h2>
+            <h3 style="text-shadow: 1px;">Model of starch hydrolysis by γ-Amylase</h3>
             <h3 id='γ-amylase-production-rate'>γ-Amylase production rate</h3>
             <p>We assumed that the rate of γ-Amylase production was proportional to the rate at which ssDNA was cleaved in the DNA nanosponge. And we determined this proportionality factor (k12) based on experimental data on the release of γ-Amylase from the DNA nanosponge.
             <html>
@@ -326,7 +328,7 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <h3 id='model-of-starch-hydrolysis-by-γ-amylase-2'>Model of starch hydrolysis by γ-Amylase</h3>
+            <h3 >Model of starch hydrolysis by γ-Amylase</h3>
             <p>γ-Amylase (EC 3.2.1.3) is an exoenzyme attacking both exo-(1-4) and branch-point (1-6)-linkages to produce glucose. The reaction of γ-Amylase is inhibited by the accumulation of product glucose at higher substrate starch concentrations. According to the literature [3], we obtained a Kinetic model for inhibition of starch hydrolysis by competitive products by 10U/ml γ-Amylase in high concentration soluble solution. We also converted the data from the literature for velocities based on the definition of enzyme activity. （PS. One unit of enzyme activity was defined as the amount of enzyme, which hydrolyzed 1 mg of starch per minute under specified conditions.）
             <html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
@@ -358,7 +360,7 @@
                 </figure>
             </html></p>
           
-            <h2 id='title4'>Electrical signal conversion model for glucose concentration</h2>
+            <h3 style="text-shadow: 1px;">Electrical signal conversion model for glucose concentration</h3>
             <p>The member responsible for the hardware section fitted the detected glucose concentration to the voltage signal using a modified blood glucose meter. 
             <html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
@@ -379,7 +381,7 @@
                     </figcaption>
                 </figure>
             </html></p> 
-            <h2 id='title5'>Kinetic simulation of the entire detection system</h2>
+            <h3 style="text-shadow: 1px;">Kinetic simulation of the entire detection system</h3>
             <p>For the entire assay system, four corresponding kinetic models were constructed in parts. As the wet experimental design was implemented in the same reaction system the Cas-gRNA-activator complex cleaves the DNA nanosponge in trans, releases the amylase hydrolysis substrate to produce glucose and detects the blood glucose concentration by a modified blood glucose meter.</p>
             <p>So we combined the CRISPR-Cas system trans-cleavage kinetic model, the γ-Amylase hydrolysis starch model and the glucose concentration conversion to electrical signal model. The combined process was simulated with Cas12 as an example, and the curve of glucose concentration in the system with time was obtained. As shown below, the green and orange lines are the simulated data, while the red dots are the experimental data. The R-squared between the simulated output of Cas12a and the experimental data is 0.98872, which is calculated based on the following equation.
             <html>
@@ -402,7 +404,7 @@
             </html></p>
             <p>And according to the linear equation between the glucose concentration and the electrical signal obtained in the hardware section, the glucose concentration can be converted into an electrical signal to obtain a reading.</p>
             <p>In summary, our project achieves a kinetic simulation of the entire assay system. In the RT-RPA part, we took the DNA concentration at 900s as the output by fitting the analysis to the relevant parameters in isothermal amplification, using the RNA of 1E-12M as input. In the Cas section, we took the DNA concentration output from the previous step as input, modelled the enzymatic kinetics of the Cas-gRNA-activator complex trans-cleavage activity and output the concentration of cleaved reporter DNA just reaching plateau. In the γ-amylase section, we converted the cleaved reporter DNA concentration output in the previous step to the γ-amylase release concentration and constructed a kinetic model of γ-amylase hydrolysis with competitive inhibition of the product, taking the glucose concentration just reaching plateau as the output. Finally, in the electrochemical section, we converted the glucose concentration to an electrical signal and obtained the glucometer readings.</p>
-            <h2 id='title6'>Molecular dynamics simulation for CasΦ mutants</h2>
+            <h2 id='title2'>Molecular dynamics simulation for CasΦ mutants</h2>
             <p>We performed molecular dynamics simulation for six kinds of CasΦ mutants collected from literature and wet lab design. The RMSD of different CasΦ mutants were calculated using gmx rms module in the Gromacs package. We analyzed the changes in the skeleton carbon atom of the protein and the central structure of the entire protein.</p>
             <p>The average structure after 400 ns of the simulation was extracted to check the RMSD and Rg of the simulated trajectory respectively. As shown in <b>Figure 25</b>, in the two mutant types of CasΦ (Mut-1 and Mut-4), the RMSD for the whole system is far away, with a large shift after 100 ns, after which it keeps converging. While the RMSD of the wild-type CasΦ and other mutants present the stability of about 0.32 nm after 150 ns, with less vibration of the system. This stability result may be related to the conformational changes induced by hydrogen bonds within the protein molecule.</p>
             <p><html>
@@ -459,7 +461,10 @@
                 </figure>
             </html>
             <p><b>Figure 29.</b> Average RMSF value for wild-type CasΦ and mutants.</p>
-            <h2 id='title7'>Appendix 1.Substance names,parameter names and mathematical equations involved in the model of RPA.</h2>
+            <h2 id="title3">
+                Appendix
+            </h2>
+            <h3 style="text-shadow: 1px;">Appendix 1.Substance names,parameter names and mathematical equations involved in the model of RPA.</h3>
             <h3 id='11list-of-substance-names-involved-in-rpa'>1.1List of substance names involved in RPA</h3>
             <p><html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
@@ -480,7 +485,7 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <h2 id='title8'>Appendix 2.Substance names,parameter names and mathematical equations involved in enzyme kinetic model for trans cleavage of CRISPR-Cas system and γ-Amylase hydrolysis model</h2>
+            <h3 style="text-shadow: 1px;">Appendix 2.Substance names,parameter names and mathematical equations involved in enzyme kinetic model for trans cleavage of CRISPR-Cas system and γ-Amylase hydrolysis model</h3>
             <h3 id='21-list-of-substance-names-involved-in-models'>2.1 List of substance names involved in models</h3>
             <p><html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
@@ -501,7 +506,7 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <h2 id='title9'>References</h2>
+            <h2 id='title4'>References</h2>
             <p class="mhyref">[1] Moody, C. et al.  “A mathematical model of recombinase polymerase amplificationunder continuously stirred conditions.’’Biochem. Eng. J. 2016, 112, 193– 201</p>
             <p class="mhyref">[2] Huyke, Diego A et al. “Enzyme Kinetics and Detector Sensitivity Determine Limits of Detection of Amplification-Free CRISPR-Cas12 and CRISPR-Cas13 Diagnostics.” Analytical chemistry vol. 94,27 (2022): 9826-9834. doi:10.1021/acs.analchem.2c01670</p>
             <p class="mhyref">[3] Mian Li et al.“Kinetic enhancement of starch bioconversion in thermoseparating aqueous two-phase reactor systems
