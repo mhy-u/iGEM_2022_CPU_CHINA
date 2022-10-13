@@ -54,6 +54,157 @@
     </ul>
   </div>
 </div> -->
+<style>
+  /* navigation_css */
+.navigation_a {
+    font-family: SOURCESANSPRO-REGULAR;
+    /* font-size:0.8rem; */
+    font-size:13px;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.backtoindex{
+    top: -85px;
+    left: -80px;
+    position: fixed;
+    z-index: 10;
+    /* height:480px;
+    width: 480px; */
+    height:1vw;
+    width: 1vw;
+    background-image: url(https://static.igem.wiki/teams/4308/wiki/static/imgs/backtoindex.png);
+    transform: scale(0.5);
+    background-repeat: no-repeat;
+}
+
+.mhynav {
+    height: 150px;
+    width: 130px;
+    top: 5px;
+    right: 120px;
+    position: fixed;
+    background-image: url(https://static.igem.wiki/teams/4308/wiki/static/imgs/cat-navigation.gif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform: translate(50%, 50%);
+    z-index: 10;
+}
+
+.mhynav:hover {
+    cursor: pointer;
+}
+
+.mhynavbox {
+    position: fixed;
+    /*width: 389px;*/
+    width: 800px;
+    height: 300px;
+    top: 1px;  /* 左上优先，导航在右边，应该固定右、上 */
+    right: 20px;
+    z-index: 15;
+    display: none;
+}
+
+.mhynavbox li {
+    list-style: none;
+    width: 240px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 66px;
+    margin: 25px auto;
+    text-align: center;
+    /* text-transform:uppercase; */
+    line-height: 57px;
+    font-size: 25px;
+    color: #333333;
+    font-weight: bolder;
+    float: none;
+    cursor: pointer;
+}
+/* .nav_firstclass{
+    text-transform:uppercase;
+} */
+.mhynavbox li:hover {
+    font-size: 28px;
+}
+
+
+.mhynavbox li:first-child {
+    background-color: #115596;
+    color: #ffffff;
+}
+
+/* 导航栏遮罩 */
+.mhycover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    display: none;
+}
+
+
+.mhyTag li:first-child {
+    background-color: #ffffff;
+    color: black;
+}
+
+.mhyTag {
+    position: fixed;
+    z-index: 10;
+    top: -30px;
+    right:600px;
+    /* left: 1050px; */
+    width: 380px;
+    height: 60px;
+    border-radius: 33px;
+    margin: 25px auto;
+    text-align: center;
+    line-height: 57px;
+    font-size: 23px;
+    color: #333333;
+    font-weight: bolder;
+    float: none;
+    cursor: pointer;
+    display: none;
+}
+
+.mhyTag li {
+    list-style: none;
+    width: 380px;
+    height: 60px;
+    border-radius: 33px;
+    background-color: #ffffff;
+    margin: 25px auto;
+    text-align: center;
+    line-height: 57px;
+    font-size: 23px;
+    color: black;
+    /*font-weight: bolder;*/
+    float: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.mhyTag li a {
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    color: black;
+}
+
+.mhyTag li:hover {
+    font-size: 28px;
+    border: #176dbd;
+}
+
+</style>
 
 <style type="text/css">
   *{
