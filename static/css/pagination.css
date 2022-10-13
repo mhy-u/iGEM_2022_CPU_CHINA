@@ -214,8 +214,8 @@
     font-family:SOURCESANSPRO-REGULAR;
     font-size: 22px;
     color: #38393a;
-    /* text-shadow: 0.2px 0px; */
-    font-weight: 200;
+    text-shadow: 0.25px 0px;
+    /* font-weight: 200; */
     opacity: 0.8;
 
 }
