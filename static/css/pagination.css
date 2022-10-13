@@ -173,6 +173,17 @@
     width: 100%;
 }
 
+.mhyrightcontent h1{
+    margin: 10% auto;
+    text-align: center;
+    font-family: Rubik-Black;
+    font-weight: 800;
+    text-shadow: 2.5px;
+    color: rgb(9, 98, 176);
+    font-size:3.5rem;
+    -webkit-transform: skew(-15deg, 0deg);
+}
+
 .mhyrightcontent h2{
     margin: 10% auto;
     text-align: center;
