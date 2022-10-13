@@ -35,6 +35,12 @@
     </ul>
   </div>
 </div> -->
+<style>
+  .mhyrightcontent img {
+    width:90%;
+    height:80%;
+  }
+</style>
 
 <div>
   <!-- Pagination_header -->
@@ -72,17 +78,17 @@
             <h2 id='title2'>Gene Expression Analysis</h2>
             <p>We used the built-in R (Version 3.6.4) tool of the Sangerbox<sup>[7]</sup> to acquire plots of the UCSC XENA RNAseq data in TPM (transcripts per million reads) format for the Cancer Genome Atlas (TCGA) and the Genotype Tissue Expression Project, and the data is uniformly processed by the Toil process<sup>[8]</sup>. Then we analyzed LINC00857 expression in all TCGA cancers at different pathological stages by using GEPIA2 (Interactive Gene Expression profiling, Version 2) tool. The log2[TPM (per million transcripts) +1] transformed expression data is applied to the violin diagram. For tumors without normal sample data in TCGA, we used the GTEx dataset to further evaluate the difference in LINC00857 expression in tumor and normal samples. We found that the level of LINC00857 had different expression in tumor samples (<strong>Figure 2A</strong>, P&lt;0.05). Then we used GEPIA2 to investigate the differential expression of LINC00857 between tumors and adjacent normal samples. As shown in <strong>Figure 2B</strong>, the expression level of LINC00857 in the tumor samples of KIRP, LUAD, PAAD and STAD higher than the corresponding control samples. We also used the exorBase 2.0 to evaluate the expression of LINC00857 in the human blood. As shown in <strong>Figure 2C-D</strong>, in the human blood samples, we found that the level of LINC00857 had different expression in BRCA, CRC, GBM, HCC, OV, PAAD and ESCC.</p>
               <figure style="display: flex; justify-content: center; align-items: center;">
-                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture1.png" width="60%" style="float:center;"> 
+                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture1.png"  style="float:center;width:100%"> 
               </figure>
 
             <span><strong>Figure 1.</strong> Interactive Body Map. The median expression of tumor and normal samples in body map by GEPIA2.</span>
-              <figure style="display: flex; justify-content: center; align-items: center;">
+              <figure style="display: flex; justify-content: center; align-items: center;padding:0;margin:0">
                  <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture2.png" width="60%" style="float:center;"> 
               </figure>
 
             <span><strong>Figure 2.</strong> Expression levels of LINC00857 in human tumors. (A) LINC00857 expression level comparison in TCGA project relative to the corresponding normal samples (GTEx database). *p &lt; 0.05; <strong>p &lt; 0.01; *</strong>p &lt; 0.001. (B) Expression level of LINC000857 in TCGA tumors vs. adjacent samples (if available) as visualized by GEPIA2. (C-D) Expression level of LINC000857 in human blood.</span>
             <p>We also analyzed the relationship between LINC00857 expression and tumor pathological staging using the GEPIA2 tool, which suggests that stage-specific expression changes in LINC00857 expression in case of many tumor types, such as UCEC, COAD, ESCA, KIRC, KIRP, LUSC, PAAD, SKCM, BLCA, LUAD and TGCT (<strong>Figure 3</strong>, all P&lt;0.05).</p>
-              <figure style="display: flex; justify-content: center; align-items: center;">
+              <figure style="display: flex; justify-content: center; align-items: center;padding:0;margin:0">
                  <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture3.png" width="60%" style="float:center;"> 
               </figure>
 
@@ -90,8 +96,8 @@
             <h2 id='title3'>Genetic Alteration Analysis</h2>
             <p>We used cBioPortal tool to collect the data of alteration frequency information across all TCGA tumors. Survival data, including PFS (Progress Free Survival) were compared for all the TCGA cancer types, with or without LINC00857genetic alteration.
             Human cancers develop due to the accumulation of genetic alterations. Therefore, we next wanted to explore LINC00857 gene alterations in human tumor samples. According to our analysis, the  LINC00857 alterations occured in a variety of cancers with “Amplification” as the primary type (<strong>Figure 4A</strong>). This supported the differential expression previously. To understand whether there is a relationship between certain genetic alterations in LINC00857 and the clinical survival prognosis of patients, we conducted systematic studies in various types of tumors and correlated them. Patients with genetic alteration of LINC00857 showed a worse prognosis in PFS (P=7.928e-3) compared with patients without LINC00857 alterations (<strong>Figure 4B</strong>).
-              <figure style="display: flex; justify-content: center; align-items: center;">
-                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture4.png" width="60%" style="float:center;"> 
+              <figure style="display: flex; justify-content: center; align-items: center;margin:0">
+                 <img src=" https://static.igem.wiki/teams/4308/wiki/mathematical-model/bioinfomatic/picture4.png" width="60%" style="float:center;width:100%;height: 100%;padding:0"> 
               </figure>
 
             <span><strong>Figure 4.</strong> Mutational status of LINC00857 in TCGA tumors. We analyzed the mutational status of LINC00857 in TCGA tumors by using using the cBioPortal tool. The alteration frequency with mutation type (A) and mutation site (B) Analysis of the correlation between mutation status and PFS using the cBioPortal tool.</p></span>
