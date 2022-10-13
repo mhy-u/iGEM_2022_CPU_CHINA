@@ -78,7 +78,7 @@
             
             <h2 id="title1">Dynamics model</h2>
             <p>Our Dynamics Modeling section ran throughout the project. Corresponding to the four parts of the project design, we built four sub-models: reverse transcription isothermal amplification model, enzyme kinetic model for trans cleavage of CRISPR-Cas system, Model of starch hydrolysis by γ-Amylase and Electrical signal conversion model for glucose concentration.  Each sub-model was connected using upstream sub-model outputs as the downstream sub-model inputs. Finally, we simulated the kinetics behavior of the entire detection system, based on ODE equations and experimental data. Simulation output and wet lab experiment data reached a R-squared greater than 0.98. Mathematical models were solved using R as a software tool.</p>
-            <h3 style="text-shadow: 1px;">Reverse transcription isothermal amplification model</h3>
+            <h3 style="font-weight: 1000;">Reverse transcription isothermal amplification model</h3>
             <h3 id='reverse-transcription'>Reverse transcription</h3>
             <p>The simplified linc00857 reverse transcription process is shown in the following equation. The reaction process is rapid relative to the DNA isothermal amplification process and can be approximated as the amount of RNA added being reverse transcribed to the amount of DNA template in a very short time.
             <html>
@@ -170,7 +170,7 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <h3 style="text-shadow: 1px;">Enzyme kinetic model for trans cleavage of CRISPR-Cas system</h3>
+            <h3 style="font-weight: 1000;">Enzyme kinetic model for trans cleavage of CRISPR-Cas system</h3>
             <h3 id='cas-grna-specific-activation'>Cas-gRNA specific activation</h3>
             <p>Since the Cas-gRNA-specific activation step is strongly influenced by the base sequence, and it is often performed together with the trans-cleavage activity verification experiment during the wet-lab reaction. Therefore, we treat this process in the same way as the reverse transcription process. It is assumed that the step is very fast, i.e. the amount of DNA input in the previous step can be approximated as the amount of Cas-gRNA-activator complex generated in the next step.</p>
             <h4 id='response-mechanism'>Response mechanism </h4>
@@ -316,7 +316,7 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <h3 style="text-shadow: 1px;">Model of starch hydrolysis by γ-Amylase</h3>
+            <h3 style="font-weight: 1000;">Model of starch hydrolysis by γ-Amylase</h3>
             <h3 id='γ-amylase-production-rate'>γ-Amylase production rate</h3>
             <p>We assumed that the rate of γ-Amylase production was proportional to the rate at which ssDNA was cleaved in the DNA nanosponge. And we determined this proportionality factor (k12) based on experimental data on the release of γ-Amylase from the DNA nanosponge.
             <html>
@@ -360,7 +360,7 @@
                 </figure>
             </html></p>
           
-            <h3 style="text-shadow: 1px;">Electrical signal conversion model for glucose concentration</h3>
+            <h3 style="font-weight: 1000;">Electrical signal conversion model for glucose concentration</h3>
             <p>The member responsible for the hardware section fitted the detected glucose concentration to the voltage signal using a modified blood glucose meter. 
             <html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
@@ -381,7 +381,7 @@
                     </figcaption>
                 </figure>
             </html></p> 
-            <h3 style="text-shadow: 1px;">Kinetic simulation of the entire detection system</h3>
+            <h3 style="font-weight: 1000;">Kinetic simulation of the entire detection system</h3>
             <p>For the entire assay system, four corresponding kinetic models were constructed in parts. As the wet experimental design was implemented in the same reaction system the Cas-gRNA-activator complex cleaves the DNA nanosponge in trans, releases the amylase hydrolysis substrate to produce glucose and detects the blood glucose concentration by a modified blood glucose meter.</p>
             <p>So we combined the CRISPR-Cas system trans-cleavage kinetic model, the γ-Amylase hydrolysis starch model and the glucose concentration conversion to electrical signal model. The combined process was simulated with Cas12 as an example, and the curve of glucose concentration in the system with time was obtained. As shown below, the green and orange lines are the simulated data, while the red dots are the experimental data. The R-squared between the simulated output of Cas12a and the experimental data is 0.98872, which is calculated based on the following equation.
             <html>
@@ -464,7 +464,7 @@
             <h2 id="title3">
                 Appendix
             </h2>
-            <h3 style="text-shadow: 1px;">Appendix 1.Substance names,parameter names and mathematical equations involved in the model of RPA.</h3>
+            <h3 style="font-weight: 1000;">Appendix 1.Substance names,parameter names and mathematical equations involved in the model of RPA.</h3>
             <h3 id='11list-of-substance-names-involved-in-rpa'>1.1List of substance names involved in RPA</h3>
             <p><html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
@@ -485,7 +485,7 @@
                     </figcaption>
                 </figure>
             </html></p>
-            <h3 style="text-shadow: 1px;">Appendix 2.Substance names,parameter names and mathematical equations involved in enzyme kinetic model for trans cleavage of CRISPR-Cas system and γ-Amylase hydrolysis model</h3>
+            <h3 style="font-weight: 1000;">Appendix 2.Substance names,parameter names and mathematical equations involved in enzyme kinetic model for trans cleavage of CRISPR-Cas system and γ-Amylase hydrolysis model</h3>
             <h3 id='21-list-of-substance-names-involved-in-models'>2.1 List of substance names involved in models</h3>
             <p><html>
                 <figure style="display: flex; justify-content: center; align-items: center;">
