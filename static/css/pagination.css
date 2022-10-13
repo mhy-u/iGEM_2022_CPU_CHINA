@@ -26,7 +26,7 @@
     /* opacity: 0.2; */
     /* height:10000px; */
     font-size: 50px;
-    padding:20px 5vw;
+    padding:20px 6vw;
     padding-bottom: 150px;
     z-index:2;
 }
@@ -188,6 +188,7 @@
     margin: 20px 0;
     color: rgb(9, 98, 176);
     font-size:28px;
+    text-shadow: 1px;
 
 }
 
@@ -213,7 +214,7 @@
     font-family:SOURCESANSPRO-REGULAR;
     font-size: 22px;
     color: #38393a;
-    text-shadow: 0.3px 0px;
+    /* text-shadow: 0.3px 0px; */
     opacity: 0.8;
 
 }
@@ -225,7 +226,7 @@
     font-family:SOURCESANSPRO-REGULAR;
     font-size: 22px;
     color: #38393a;
-    text-shadow: 0.3px 0px;
+    /* text-shadow: 0.3px 0px; */
     opacity: 0.8;
 
 }
@@ -289,7 +290,7 @@
 .mhyref {
     margin:25px 0px;
     font-family:SOURCESANSPRO-REGULAR;
-    font-size: 16px;
+    font-size: 1.2vw;
     color: #38393a;
     opacity: 0.8;
     font-style: italic;
