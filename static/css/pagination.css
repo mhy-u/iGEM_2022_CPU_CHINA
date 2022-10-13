@@ -312,3 +312,16 @@
     opacity: 0.8;
     font-style: italic;
 }
+
+.kipbutton {
+    width: 35vmin;
+    height: 10vmin;
+    padding: 4% 3%;
+    background-color: #1c69c6;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3em;
+    color: #FFFFFF;
+    font-family: "MONTSERRAT-BLACK1";
+    -webkit-box-shadow: 0 1px 8px rgb(0 0 0 / 30%), 0 0 40px rgb(0 0 0 / 10%) inset;
+}
