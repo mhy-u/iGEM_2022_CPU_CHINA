@@ -1,5 +1,5 @@
 # Team CPU_CHINA 2022 Wiki
-## Project URL:view our website in [2022.igem.wiki/cpu-china/](2022.igem.wiki/cpu-china/)
+## Project URL:view our website in [2022.igem.wiki/cpu-china/](https://2022.igem.wiki/cpu-china/)
 
 This repository **MUST** contain all coding assets to generate your team's wiki (HTML, CSS, JavaScript, TypeScript, Python, etc).
 
